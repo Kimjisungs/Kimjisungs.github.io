@@ -7,17 +7,18 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>Archives - 지성이의 블로그</title>
+<title>연산자 - 지성이의 블로그</title>
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="지성이의 블로그">
-<meta property="og:url" content="https://kimjisungs.github.io/archives/index.html">
+    <meta property="og:type" content="article">
+<meta property="og:title" content="연산자">
+<meta property="og:url" content="https://kimjisungs.github.io/2019/10/02/javascript/03_operator/index.html">
 <meta property="og:site_name" content="지성이의 블로그">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://kimjisungs.github.io/images/og_image.png">
+<meta property="og:updated_time" content="2019-10-02T11:09:47.109Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="지성이의 블로그">
+<meta name="twitter:title" content="연산자">
 <meta name="twitter:image" content="https://kimjisungs.github.io/images/og_image.png">
 
 
@@ -88,7 +89,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="지성이의 블로그" height="28">
+                <img src="/images/logo.svg" alt="연산자" height="28">
             
             </a>
         </div>
@@ -99,7 +100,7 @@
                 <a class="navbar-item"
                 href="/">Home</a>
                 
-                <a class="navbar-item is-active"
+                <a class="navbar-item"
                 href="/archives">Archives</a>
                 
                 <a class="navbar-item"
@@ -138,229 +139,146 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
         
-<div class="card widget">
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-10-02T10:15:54.298Z">2019-10-02</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/study/">study</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    10 minutes read (About 1447 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                연산자
+            
+        </h1>
+        <div class="content">
+            <p><span> </span></p>
+<a id="more"></a>
+
+<h2 id="표현식과-연산자"><a href="#표현식과-연산자" class="headerlink" title="표현식과 연산자"></a>표현식과 연산자</h2><p>표현식은 리터럴, 식별자, 연산자, 함수/메소드 호출 표현식 등으로 나누어볼 수 있지만 결과적으로 하나의 값을 만든다는 점에서 모두 동일하다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> x = <span class="hljs-number">10</span>;</span><br><span class="line"><span class="hljs-comment">// 표현식 + 30은 식별자 표현식과 숫자 리터럴과 연산자의 조합으로 구성되어 있다.</span></span><br><span class="line">x + <span class="hljs-number">30</span>; <span class="hljs-comment">// -&gt; 40</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="문과-표현식"><a href="#문과-표현식" class="headerlink" title="문과 표현식"></a>문과 표현식</h2><p><strong>문(statement)은 하나 이상의 표현식과 키워드의 조합으로 구성된 자바스크립트 엔진에게 내리는 명령</strong>이다. 문의 집합으로 이루어진 것이 바로 프로그램이며 문을 작성하고 순서에 맞게 나열하는것이 프로그램이다.</p>
+<p><strong>자바스크립트의 모든 코드는 문 또는 표현식이다</strong>. 표현식은 그 자체로 문이 될 수 있지만, 문이 표현식이 될 수 없다.</p>
+<p><strong>표현식의 역할은 값을 생성하는 것이다. 문의 역할은 표현식으로 생성한 값을 사용해 자바스크립트 엔진에게 명령을 내리는 것이다</strong></p>
+<h2 id="표현식인-문과-표현식이-아닌-문"><a href="#표현식인-문과-표현식이-아닌-문" class="headerlink" title="표현식인 문과 표현식이 아닌 문"></a>표현식인 문과 표현식이 아닌 문</h2><p>변수 선언문은 값으로 평가될 수 없다. 따라서 표현식이 아닌 문이다. 하지만 할당문은 그 자체가 표현식인 문이다.</p>
+<p><strong>표현식인 문과 표현식이 아닌 문을 구별하기 위한 가장 간단하고 명료한 방법은 변수에 할당해 보는 것이다</strong></p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> x; <span class="hljs-comment">// 변수 선언문은 표현식이 아닌 문이다.</span></span><br><span class="line">x = <span class="hljs-number">100</span>; <span class="hljs-comment">// 할당문 자체가 표현식이지만 완전한 문이기도 하다. 즉 할당문은 표현식인 문이다.</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">var</span> foo = <span class="hljs-keyword">var</span> x; <span class="hljs-comment">// 표현식이 아닌 문은 값처럼 사용할 수 없다.</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">var</span> foo = x = <span class="hljs-number">100</span>; <span class="hljs-comment">// 표현식인 문은 값처럼 사용할 수 없다.</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(foo); <span class="hljs-comment">//100</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="연산자란"><a href="#연산자란" class="headerlink" title="연산자란?"></a>연산자란?</h2><p>하나 이상의 표현식을 대상으로 산술, 할당, 비교, 논리, 타입 연산 등을 수행해 하나의 값을 만든다. 이때 연산의 대상을 피연산자라고 한다. 연산자는 값으로 평가된 피연산자를 연산해 새로운 값을 만든다.</p>
+<h3 id="이항-산술-연산자"><a href="#이항-산술-연산자" class="headerlink" title="이항 산술 연산자"></a>이항 산술 연산자</h3><p>2개의 피연산자를 산술연산하여 값을 만든다.<br>피연산자의 갑슬 변경하는 부수 효과는 없다. 언제나 새로운 값을 만든다.</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+, -, *, /, %</span><br></pre></td></tr></table></figure>
+
+<h3 id="단항-산술-연산자"><a href="#단항-산술-연산자" class="headerlink" title="단항 산술 연산자"></a>단항 산술 연산자</h3><p>1개의 피연산자를 산술 연산하여 숫자 타입의 값을 만든다. 이항 산술 연산자와는 달리 <strong>증가/감소(++/–) 연산자는 피연산자의 값을 변경하는 부수 효과가 있다.</strong>. 다시 말해 증가/감소 연산을 하면 피연산자의 값이 바뀐다.</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">++, --, +, -</span><br></pre></td></tr></table></figure>
+
+<h3 id="문자열-연결-연산자"><a href="#문자열-연결-연산자" class="headerlink" title="문자열 연결 연산자"></a>문자열 연결 연산자</h3><p><strong>+ 연산자는 피연산자 중 하나 이상이 문자열인 경우 문자열 연결 연산자로 동작한다.</strong>. 그 외의 경우 덧셈 연산자로 동작한다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-string">'1'</span> + <span class="hljs-number">2</span>; <span class="hljs-comment">// -&gt; '12'</span></span><br><span class="line"><span class="hljs-number">1</span> + <span class="hljs-string">'2'</span>; <span class="hljs-comment">// -&gt; '12'</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="할당-연산자"><a href="#할당-연산자" class="headerlink" title="할당 연산자"></a>할당 연산자</h3><p>할당 연산자는 우항에 있는 피연산자의 평가 결과를 좌항에 있는 변수에 할당한다. 할당 연산자는 좌항의 변수에 값을 할당하므로 변수의 값이 변하는 부수 효과가 있다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// =, +=, -=, *=, /=, %=</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">var</span> x;</span><br><span class="line">x += <span class="hljs-number">5</span>; <span class="hljs-comment">// x = x + 5;</span></span><br><span class="line">x -= <span class="hljs-number">5</span>; <span class="hljs-comment">// x = x - 5;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="비교연산자"><a href="#비교연산자" class="headerlink" title="비교연산자"></a>비교연산자</h3><p>비교연산자는 좌항과 우항의 피연산자를 비교한 다음 그 결과를 불리언 값을 반환한다. 비교 연산자는 if 문이나 for문과 같은 제어문의 조건식에서 주로 사용한다.</p>
+<h3 id="동등-일치-비교-연산자"><a href="#동등-일치-비교-연산자" class="headerlink" title="동등 / 일치 비교 연산자"></a>동등 / 일치 비교 연산자</h3><p>동등 비교 연산자와 일치 비교 연산자는 좌항과 우항의 피연산자가 같은 값을 갖는지 비교하여 불리언 값을 반환한다. 하지만 비교하는 엄격성의 정도가 다르다. 동등 비교 연산자는 느슨한 비교를 하지만 일치 비교 연산자는 엄격한 비교를 한다.</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">==, ===, !=, !==</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-literal">NaN</span> === <span class="hljs-literal">NaN</span>; <span class="hljs-comment">// -&gt; false;</span></span><br><span class="line"><span class="hljs-built_in">isNaN</span>(<span class="hljs-literal">NaN</span>); <span class="hljs-comment">//-&gt; true;</span></span><br><span class="line"><span class="hljs-built_in">isNaN</span>(<span class="hljs-number">10</span>); <span class="hljs-comment">// -&gt; false;</span></span><br><span class="line"><span class="hljs-built_in">isNaN</span>(<span class="hljs-number">1</span> + <span class="hljs-literal">undefined</span>); <span class="hljs-comment">// -&gt; true;</span></span><br></pre></td></tr></table></figure>
+
+<p>Nan은 자신과 일치하지 않는 유일한 값이다. 따라서 숫자가 NaN인지 조사하려면 빌트인 함수 isNaN을 사용한다.</p>
+<h3 id="대소-관계-비교-연산자"><a href="#대소-관계-비교-연산자" class="headerlink" title="대소 관계 비교 연산자"></a>대소 관계 비교 연산자</h3><p>대소 관계 비교 연산자는 피연산자의 크기를 비교하여 불리언 값을 반환한다.</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;, &lt;, &gt;=, &lt;=</span><br></pre></td></tr></table></figure>
+
+<h2 id="삼항-조건-연산자"><a href="#삼항-조건-연산자" class="headerlink" title="삼항 조건 연산자"></a>삼항 조건 연산자</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">조건식 ? 조건식이 true일때 반환할 값 : 조건식이 false일때 반환할 값</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> x = <span class="hljs-number">2</span>;</span><br><span class="line"><span class="hljs-keyword">var</span> result = x % <span class="hljs-number">2</span> ? <span class="hljs-string">'홀수'</span> : <span class="hljs-string">'짝수'</span>; <span class="hljs-comment">// 2 % 2는 0 이고 0은 false로 암묵적 타입이 변환된다.</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(result); <span class="hljs-comment">// 짝수</span></span><br></pre></td></tr></table></figure>
+
+<p>if else 문은 표현식이 아닌 문이라서 값처럼 사용할 수 없다.<br><strong>삼항조건 연산자는 표현식은 값으로 평가할 수 있는 표현식 문이다.</strong></p>
+<h2 id="논리-연산자"><a href="#논리-연산자" class="headerlink" title="논리 연산자"></a>논리 연산자</h2><p>논리 연산자는 우항과 좌항의 피연산자를 논리 연산한다.</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">||, &amp;&amp;, !</span><br></pre></td></tr></table></figure>
+
+<h2 id="typeof-연산자"><a href="#typeof-연산자" class="headerlink" title="typeof 연산자"></a>typeof 연산자</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">typeof</span> <span class="hljs-string">''</span> <span class="hljs-comment">// string</span></span><br><span class="line"><span class="hljs-keyword">typeof</span> <span class="hljs-number">1</span> <span class="hljs-comment">// number</span></span><br><span class="line"><span class="hljs-keyword">typeof</span> <span class="hljs-literal">NaN</span> <span class="hljs-comment">// number</span></span><br><span class="line"><span class="hljs-keyword">typeof</span> <span class="hljs-literal">true</span> <span class="hljs-comment">// boolean</span></span><br><span class="line"><span class="hljs-keyword">typeof</span> <span class="hljs-literal">undefined</span> <span class="hljs-comment">// undefined</span></span><br><span class="line"><span class="hljs-keyword">typeof</span> <span class="hljs-built_in">Symbol</span>() <span class="hljs-comment">// symbol</span></span><br><span class="line"><span class="hljs-keyword">typeof</span> <span class="hljs-literal">null</span> <span class="hljs-comment">// object</span></span><br><span class="line"><span class="hljs-keyword">typeof</span> [] <span class="hljs-comment">// object</span></span><br><span class="line"><span class="hljs-keyword">typeof</span> &#123;&#125; <span class="hljs-comment">// object</span></span><br><span class="line"><span class="hljs-keyword">typeof</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>() <span class="hljs-comment">// object</span></span><br><span class="line"><span class="hljs-keyword">typeof</span> /test/gi <span class="hljs-comment">// object</span></span><br><span class="line"><span class="hljs-keyword">typeof</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>)</span>&#123;&#125; <span class="hljs-comment">// function</span></span><br></pre></td></tr></table></figure>
+
+<p>typeof  연산자로 null 값을 연산해 보면 ‘null’이 아닌 ‘object’를 반환하는 것에 주의해야한다. 이것은 자바스크립트의 첫번째 버그이다. null타입을 확인할 때 typeof 연산자를 사용하지 말고 일치 연산자(===)를 사용하도록 하자.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> foo = <span class="hljs-literal">null</span>;</span><br><span class="line"><span class="hljs-keyword">typeof</span> foo === <span class="hljs-literal">null</span>; <span class="hljs-comment">// -&gt; false;</span></span><br><span class="line">foo === <span class="hljs-literal">null</span>; <span class="hljs-comment">// -&gt; true;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="지수-연산자"><a href="#지수-연산자" class="headerlink" title="지수 연산자"></a>지수 연산자</h2><p>ES7에서 새롭게 도입된 지수 연산자는 좌항의 피연산자를 밑으로, 우항의 피연산자를 지수로 거듭 제곱하여 숫자 타입의 값을 반환한다.</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
     <div class="card-content">
-        <h3 class="tag is-link">
-        2019
-        </h3>
-        <div class="timeline">
-        
-            <article class="media">
+        <h3 class="menu-label has-text-centered">Like this article? Support the author with</h3>
+        <div class="buttons is-centered">
+            
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-10-02T10:15:54.298Z">2019-10-02</time>
-                        <a href="/2019/10/02/javascript/03_operator/" class="title has-link-black-ter is-size-6 has-text-weight-normal">연산자</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
+<div class="notification is-danger">
+    You forgot to set the <code>qrcode</code> for Alipay. Please set it in <code>_config.yml</code>.
+</div>
+
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-10-02T09:15:15.278Z">2019-10-02</time>
-                        <a href="/2019/10/02/javascript/02_data-type/" class="title has-link-black-ter is-size-6 has-text-weight-normal">data-type</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-10-01T09:31:00.095Z">2019-10-01</time>
-                        <a href="/2019/10/01/javascript/01_variable/" class="title has-link-black-ter is-size-6 has-text-weight-normal">variable (변수)</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
+<div class="notification is-danger">
+    You forgot to set the <code>qrcode</code> for Wechat. Please set it in <code>_config.yml</code>.
+</div>
+
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-10-01T09:29:05.738Z">2019-10-01</time>
-                        <a href="/2019/10/01/javascript/00_development-environment/" class="title has-link-black-ter is-size-6 has-text-weight-normal">자바스크립트 개발 환경 및 실행 환경</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
+                <!-- Visit https://www.paypal.com/donate/buttons/ to get your donate button -->
+
+<div class="notification is-danger">
+    You forgot to set the <code>business</code> and <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.
+</div>
+
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-10-01T09:23:09.943Z">2019-10-01</time>
-                        <a href="/2019/10/01/concept/02_javascript_ECMAScript/" class="title has-link-black-ter is-size-6 has-text-weight-normal">javascript VS ECMAScript</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/개념이해/">개념이해</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-10-01T09:17:39.368Z">2019-10-01</time>
-                        <a href="/2019/10/01/concept/01_compiler_interpreter/" class="title has-link-black-ter is-size-6 has-text-weight-normal">컴파일, 인터프리터 언어</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/개념이해/">개념이해</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
+<div class="notification is-danger">
+    You forgot to set the <code>url</code> Patreon. Please set it in <code>_config.yml</code>.
+</div>
+
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-10-01T09:05:51.310Z">2019-10-01</time>
-                        <a href="/2019/10/01/concept/00_ascii-code_uini-code/" class="title has-link-black-ter is-size-6 has-text-weight-normal">아스키코드,유니코드</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/개념이해/">개념이해</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
-                
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-10-01T07:29:13.028Z">2019-10-01</time>
-                        <a href="/2019/10/01/javascript-basic/01_what_javascript/" class="title has-link-black-ter is-size-6 has-text-weight-normal">자바스크립트란?</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript-basic/">javascript-basic</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
-                
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-10-01T06:22:04.866Z">2019-10-01</time>
-                        <a href="/2019/10/01/javascript-basic/00_basic_content/" class="title has-link-black-ter is-size-6 has-text-weight-normal">기본 개념과 동작원리 이해의 중요성</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript-basic/">javascript-basic</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
-                
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-09-30T15:00:00.000Z">2019-10-01</time>
-                        <a href="/2019/10/01/javascript-basic/intro/" class="title has-link-black-ter is-size-6 has-text-weight-normal">오리엔테이션</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript-basic/">javascript-basic</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
         </div>
     </div>
 </div>
 
-    
 
-    
+
 <div class="card card-transparent">
-    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
-        <div class="pagination-previous is-invisible is-hidden-mobile">
-            <a class="is-flex-grow has-text-black-ter" href="/archives/page/0/">Previous</a>
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/10/02/javascript/02_data-type/">
+                <span class="level-item">data-type</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
         </div>
-        <div class="pagination-next">
-            <a class="is-flex-grow has-text-black-ter" href="/archives/page/2/">Next</a>
-        </div>
-        <ul class="pagination-list is-hidden-mobile">
-            
-            <li><a class="pagination-link is-current" href="/archives/">1</a></li>
-            
-            <li><a class="pagination-link has-text-black-ter" href="/archives/page/2/">2</a></li>
-            
-        </ul>
-    </nav>
+        
+    </div>
 </div>
+
+
 </div>
                 
 
@@ -909,7 +827,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="지성이의 블로그" height="28">
+                    <img src="/images/logo.svg" alt="연산자" height="28">
                 
                 </a>
                 <p class="is-size-7">
