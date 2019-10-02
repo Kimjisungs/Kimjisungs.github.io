@@ -7,18 +7,18 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>기본 개념과 동작원리 이해의 중요성 - 지성이의 블로그</title>
+<title>자바스크립트 개발 환경 및 실행 환경 - 지성이의 블로그</title>
 
 
     <meta property="og:type" content="article">
-<meta property="og:title" content="기본 개념과 동작원리 이해의 중요성">
+<meta property="og:title" content="자바스크립트 개발 환경 및 실행 환경">
 <meta property="og:url" content="https://kimjisungs.github.io/2019/10/01/javascript/00_development-environment/index.html">
 <meta property="og:site_name" content="지성이의 블로그">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://kimjisungs.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-10-01T09:32:44.404Z">
+<meta property="og:updated_time" content="2019-10-02T07:25:00.009Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="기본 개념과 동작원리 이해의 중요성">
+<meta name="twitter:title" content="자바스크립트 개발 환경 및 실행 환경">
 <meta name="twitter:image" content="https://kimjisungs.github.io/images/og_image.png">
 
 
@@ -89,7 +89,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="기본 개념과 동작원리 이해의 중요성" height="28">
+                <img src="/images/logo.svg" alt="자바스크립트 개발 환경 및 실행 환경" height="28">
             
             </a>
         </div>
@@ -148,14 +148,14 @@
                 <time class="level-item has-text-grey" datetime="2019-10-01T09:29:05.738Z">2019-10-01</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/javascript/">javascript</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/javascript/개발환경/">개발환경</a>
+                <a class="has-link-grey -link" href="/categories/study/">study</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    a few seconds read (About 1 words)
+                    7 minutes read (About 1008 words)
                 </span>
                 
                 
@@ -164,13 +164,35 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                기본 개념과 동작원리 이해의 중요성
+                자바스크립트 개발 환경 및 실행 환경
             
         </h1>
         <div class="content">
             <p><span> </span></p>
 <a id="more"></a>
 
+<h2 id="자바스크립트-실행환경"><a href="#자바스크립트-실행환경" class="headerlink" title="자바스크립트 실행환경"></a>자바스크립트 실행환경</h2><p>모든 브라우저는 자바스크립트를 실행할 수 있는 엔진을 가지고있다. node에서도 역시 작동한다. 브라우저와 node.js는 용도가 다르다. </p>
+<h4 id="차이점"><a href="#차이점" class="headerlink" title="차이점"></a>차이점</h4><p>브라우저 : 클라이언트 사이드 Web API 제공<br>node.js : node.js 고유의 api</p>
+<h2 id="웹-브라우저"><a href="#웹-브라우저" class="headerlink" title="웹 브라우저"></a>웹 브라우저</h2><h3 id="웹-브라우저는-어떻게-작동하는가"><a href="#웹-브라우저는-어떻게-작동하는가" class="headerlink" title="웹 브라우저는 어떻게 작동하는가?"></a>웹 브라우저는 어떻게 작동하는가?</h3><h4 id="작동순서"><a href="#작동순서" class="headerlink" title="작동순서"></a>작동순서</h4><ol>
+<li>사용자 도메인 입력 (사용자가 요청을 보냄) (브라우저의 핵심 역할은 html,css,javscript를 요청) http의 규약대로 통신하여 움직인다</li>
+<li>DNS서버에서 ip주소로 변환하여 서버에 웹페이지를 요청(request)  (DNS 서버는 IP주소 변환 뿐만 아니라 위조된 사이트로 이동되는것을 막아주고 특정사이트에 접속되지 않거나 경고 메세지를 보여주는 페이지로 이동하는 등의 추가 동작을 한다.)</li>
+<li>서버의 응답을 받아(responsive) 브라우저에 표출 (브라우저는 서버로부터 html, css, javascript, 이미지 파일) 등 을 READ되어 응답, 다운로드 한다.</li>
+<li>브라우저에 의해 HTML,CSS,javascript가 분석하기위해 파싱되어 웹페이지에 표시,  파싱(브라우저 랜더링앤진)의 결과물이 돔트리다.</li>
+<li>이때 각 언어에 맞는 컴파일언어, 인터프리터 언어의 과정을 거치며 실행한다.</li>
+<li>태그의 위치에 따라 블로킹이 발생하여 DOM의 생성이 지연될 수 있기때문에 script의 위치가 중요하기 떄문에 DOM이 완전히 생성 된 후 script가 실행될 수 있도록 body 최하단에 위치 시킨다. async 및 defer을 사용하면 파싱완료 후 실행할 수 있다.</li>
+<li>후에 페인팅 한다.</li>
+</ol>
+<h3 id="개발자-도구"><a href="#개발자-도구" class="headerlink" title="개발자 도구"></a>개발자 도구</h3><p>elements : dom과 css를 편집하여 렌더링된 뷰를 볼 수 있다.<br>console : 에러 및 console.log메소드 결과를 확인 할 수 있다.<br>sources : 로딩된 웹 페이지의 자바스크립트 코딩을 디버깅 할 수있다.<br>Network : 로딩 웹페이지에 관련 네트워크 요청 정보 및 퍼포먼스 확인할 수있다.<br>Application : 웹 스토리지, 세션, 쿠키를 확인하고 관리할 수 있다.</p>
+<h3 id="콘솔"><a href="#콘솔" class="headerlink" title="콘솔"></a>콘솔</h3><p>에플리케이션이 정상적으로 동작하지 않을때 가장 우선적으로 살펴보아야한다.  에러가아니더라도 콘솔 함수를 사용하거나 자바스크립트 코드를 직접 입력하여 사용 할 수 있다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">console</span>.log();</span><br></pre></td></tr></table></figure>
+
+<h3 id="디버깅"><a href="#디버깅" class="headerlink" title="디버깅"></a>디버깅</h3><p>source패널에서 에러가 발생한 코드 왼쪽의 라인 번호를 클릭하여 브레이크 포인트(중단점)을 걸고 다시 버튼을 클릭하면 디버깅 모드에 들어가게 된다.</p>
+<p>source tab &gt; html클릭 &gt; 빨간색 밑줄의 x자에 에러메세지 나옴<br>번호 왼쪽에 클릭 break를 걸고, 새로고침해서 실행하면 나온다.</p>
+<h4 id="참고사이트"><a href="#참고사이트" class="headerlink" title="참고사이트"></a>참고사이트</h4><p>Tools for Web Developers:콘솔사용 : <a href="https://developers.google.com/web/tools/chrome-devtools/console/?hl=ko" target="_blank" rel="noopener">https://developers.google.com/web/tools/chrome-devtools/console/?hl=ko</a></p>
+<p>Tools for web Developers: Chrome Devtools 자바스크립트 디버깅 시작하기 : <a href="https://developers.google.com/web/tools/chrome-devtools/javascript/?hl=ko" target="_blank" rel="noopener">https://developers.google.com/web/tools/chrome-devtools/javascript/?hl=ko</a></p>
+<h2 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h2><p>React와같은 라이브러리를 도입하거나 Babel, Webpack, ESlint 등 여러가지 를 사용할때 Node.js와 npm이 필요하다</p>
+<h3 id="Node-js와-npm"><a href="#Node-js와-npm" class="headerlink" title="Node.js와 npm"></a>Node.js와 npm</h3><p>브라우저 이외의 환경에서 동작 시킬 수 있는 자바스크립트 실행환경이 node.js이다. 주로 서버사이드 애플리케이션 개발에 사용되고 빌트인api를 제공한다. SPA(Single Page Application)에 적합하다.</p>
+<p>npm(node pakage manager)은 자바스크립트 패키지 매니저이다. node.js에서 사용할 수 있는 모듈들을 패키지화 하여 저장소 역할과 패키지 설치 및 관리를 위해 cli를 제공한다.</p>
 
         </div>
         
@@ -293,7 +315,7 @@
                         Categories
                     </p>
                     <p class="title has-text-weight-normal">
-                        7
+                        5
                     </p>
                 </div>
             </div>
@@ -406,46 +428,14 @@
             </h3>
             <ul class="menu-list">
             <li>
-        <a class="level is-marginless" href="/categories/javascript/">
-            <span class="level-start">
-                <span class="level-item">javascript</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">2</span>
-            </span>
-        </a><ul><li>
-        <a class="level is-marginless" href="/categories/javascript/variable-변수/">
-            <span class="level-start">
-                <span class="level-item">variable(변수)</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li><li>
-        <a class="level is-marginless" href="/categories/javascript/개발환경/">
-            <span class="level-start">
-                <span class="level-item">개발환경</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li></ul></li><li>
         <a class="level is-marginless" href="/categories/study/">
             <span class="level-start">
                 <span class="level-item">study</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">7</span>
+                <span class="level-item tag">9</span>
             </span>
         </a><ul><li>
-        <a class="level is-marginless" href="/categories/study/code-concept/">
-            <span class="level-start">
-                <span class="level-item">code-concept</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">3</span>
-            </span>
-        </a></li><li>
         <a class="level is-marginless" href="/categories/study/internet/">
             <span class="level-start">
                 <span class="level-item">internet</span>
@@ -454,9 +444,25 @@
                 <span class="level-item tag">1</span>
             </span>
         </a></li><li>
+        <a class="level is-marginless" href="/categories/study/javascript/">
+            <span class="level-start">
+                <span class="level-item">javascript</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
         <a class="level is-marginless" href="/categories/study/javascript-basic/">
             <span class="level-start">
                 <span class="level-item">javascript-basic</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/study/개념이해/">
+            <span class="level-start">
+                <span class="level-item">개념이해</span>
             </span>
             <span class="level-end">
                 <span class="level-item tag">3</span>
@@ -492,7 +498,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-01T09:31:00.095Z">2019-10-01</time></div>
                     <a href="/2019/10/01/javascript/01_variable/" class="title has-link-black-ter is-size-6 has-text-weight-normal">variable (변수)</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/javascript/">javascript</a> / <a class="has-link-grey -link" href="/categories/javascript/variable-변수/">variable(변수)</a>
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
                     </p>
                 </div>
             </div>
@@ -502,16 +508,16 @@
             
             <a href="/2019/10/01/javascript/00_development-environment/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="기본 개념과 동작원리 이해의 중요성">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="자바스크립트 개발 환경 및 실행 환경">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-01T09:29:05.738Z">2019-10-01</time></div>
-                    <a href="/2019/10/01/javascript/00_development-environment/" class="title has-link-black-ter is-size-6 has-text-weight-normal">기본 개념과 동작원리 이해의 중요성</a>
+                    <a href="/2019/10/01/javascript/00_development-environment/" class="title has-link-black-ter is-size-6 has-text-weight-normal">자바스크립트 개발 환경 및 실행 환경</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/javascript/">javascript</a> / <a class="has-link-grey -link" href="/categories/javascript/개발환경/">개발환경</a>
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
                     </p>
                 </div>
             </div>
@@ -530,7 +536,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-01T09:23:09.943Z">2019-10-01</time></div>
                     <a href="/2019/10/01/concept/02_javascript_ECMAScript/" class="title has-link-black-ter is-size-6 has-text-weight-normal">javascript VS ECMAScript</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/code-concept/">code-concept</a>
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/개념이해/">개념이해</a>
                     </p>
                 </div>
             </div>
@@ -540,16 +546,16 @@
             
             <a href="/2019/10/01/concept/01_compiler_interpreter/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="compiler, interpreter">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="컴파일, 인터프리터 언어">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-01T09:17:39.368Z">2019-10-01</time></div>
-                    <a href="/2019/10/01/concept/01_compiler_interpreter/" class="title has-link-black-ter is-size-6 has-text-weight-normal">compiler, interpreter</a>
+                    <a href="/2019/10/01/concept/01_compiler_interpreter/" class="title has-link-black-ter is-size-6 has-text-weight-normal">컴파일, 인터프리터 언어</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/code-concept/">code-concept</a>
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/개념이해/">개념이해</a>
                     </p>
                 </div>
             </div>
@@ -559,16 +565,16 @@
             
             <a href="/2019/10/01/concept/00_ascii-code_uini-code/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="ascii-code,uini-code">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="아스키코드,유니코드">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-01T09:05:51.310Z">2019-10-01</time></div>
-                    <a href="/2019/10/01/concept/00_ascii-code_uini-code/" class="title has-link-black-ter is-size-6 has-text-weight-normal">ascii-code,uini-code</a>
+                    <a href="/2019/10/01/concept/00_ascii-code_uini-code/" class="title has-link-black-ter is-size-6 has-text-weight-normal">아스키코드,유니코드</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/code-concept/">code-concept</a>
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/개념이해/">개념이해</a>
                     </p>
                 </div>
             </div>
@@ -657,7 +663,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-01T09:31:00.095Z">2019-10-01</time></div>
                     <a href="/2019/10/01/javascript/01_variable/" class="title has-link-black-ter is-size-6 has-text-weight-normal">variable (변수)</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/javascript/">javascript</a> / <a class="has-link-grey -link" href="/categories/javascript/variable-변수/">variable(변수)</a>
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
                     </p>
                 </div>
             </div>
@@ -667,16 +673,16 @@
             
             <a href="/2019/10/01/javascript/00_development-environment/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="기본 개념과 동작원리 이해의 중요성">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="자바스크립트 개발 환경 및 실행 환경">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-01T09:29:05.738Z">2019-10-01</time></div>
-                    <a href="/2019/10/01/javascript/00_development-environment/" class="title has-link-black-ter is-size-6 has-text-weight-normal">기본 개념과 동작원리 이해의 중요성</a>
+                    <a href="/2019/10/01/javascript/00_development-environment/" class="title has-link-black-ter is-size-6 has-text-weight-normal">자바스크립트 개발 환경 및 실행 환경</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/javascript/">javascript</a> / <a class="has-link-grey -link" href="/categories/javascript/개발환경/">개발환경</a>
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
                     </p>
                 </div>
             </div>
@@ -695,7 +701,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-01T09:23:09.943Z">2019-10-01</time></div>
                     <a href="/2019/10/01/concept/02_javascript_ECMAScript/" class="title has-link-black-ter is-size-6 has-text-weight-normal">javascript VS ECMAScript</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/code-concept/">code-concept</a>
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/개념이해/">개념이해</a>
                     </p>
                 </div>
             </div>
@@ -705,16 +711,16 @@
             
             <a href="/2019/10/01/concept/01_compiler_interpreter/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="compiler, interpreter">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="컴파일, 인터프리터 언어">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-01T09:17:39.368Z">2019-10-01</time></div>
-                    <a href="/2019/10/01/concept/01_compiler_interpreter/" class="title has-link-black-ter is-size-6 has-text-weight-normal">compiler, interpreter</a>
+                    <a href="/2019/10/01/concept/01_compiler_interpreter/" class="title has-link-black-ter is-size-6 has-text-weight-normal">컴파일, 인터프리터 언어</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/code-concept/">code-concept</a>
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/개념이해/">개념이해</a>
                     </p>
                 </div>
             </div>
@@ -724,16 +730,16 @@
             
             <a href="/2019/10/01/concept/00_ascii-code_uini-code/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="ascii-code,uini-code">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="아스키코드,유니코드">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-01T09:05:51.310Z">2019-10-01</time></div>
-                    <a href="/2019/10/01/concept/00_ascii-code_uini-code/" class="title has-link-black-ter is-size-6 has-text-weight-normal">ascii-code,uini-code</a>
+                    <a href="/2019/10/01/concept/00_ascii-code_uini-code/" class="title has-link-black-ter is-size-6 has-text-weight-normal">아스키코드,유니코드</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/code-concept/">code-concept</a>
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/개념이해/">개념이해</a>
                     </p>
                 </div>
             </div>
@@ -803,7 +809,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="기본 개념과 동작원리 이해의 중요성" height="28">
+                    <img src="/images/logo.svg" alt="자바스크립트 개발 환경 및 실행 환경" height="28">
                 
                 </a>
                 <p class="is-size-7">

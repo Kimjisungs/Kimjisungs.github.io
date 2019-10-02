@@ -7,18 +7,18 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>ascii-code,uini-code - 지성이의 블로그</title>
+<title>아스키코드,유니코드 - 지성이의 블로그</title>
 
 
     <meta property="og:type" content="article">
-<meta property="og:title" content="ascii-code,uini-code">
+<meta property="og:title" content="아스키코드,유니코드">
 <meta property="og:url" content="https://kimjisungs.github.io/2019/10/01/concept/00_ascii-code_uini-code/index.html">
 <meta property="og:site_name" content="지성이의 블로그">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://kimjisungs.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-10-01T09:22:34.507Z">
+<meta property="og:updated_time" content="2019-10-02T00:52:59.038Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ascii-code,uini-code">
+<meta name="twitter:title" content="아스키코드,유니코드">
 <meta name="twitter:image" content="https://kimjisungs.github.io/images/og_image.png">
 
 
@@ -89,7 +89,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="ascii-code,uini-code" height="28">
+                <img src="/images/logo.svg" alt="아스키코드,유니코드" height="28">
             
             </a>
         </div>
@@ -148,14 +148,14 @@
                 <time class="level-item has-text-grey" datetime="2019-10-01T09:05:51.310Z">2019-10-01</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/study/">study</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/study/code-concept/">code-concept</a>
+                <a class="has-link-grey -link" href="/categories/study/">study</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/study/개념이해/">개념이해</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    a few seconds read (About 0 words)
+                    3 minutes read (About 521 words)
                 </span>
                 
                 
@@ -164,11 +164,23 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                ascii-code,uini-code
+                아스키코드,유니코드
             
         </h1>
         <div class="content">
-            
+            <p><span></span></p>
+<a id="more"></a>
+
+<h3 id="컴퓨터의-사용-2진수"><a href="#컴퓨터의-사용-2진수" class="headerlink" title="컴퓨터의 사용 2진수"></a>컴퓨터의 사용 2진수</h3><ol>
+<li>컴퓨터의 기본 저장 단위는 바이트(byte)이다.</li>
+<li>1바이트(byte)는 8비트(bit)이다.</li>
+<li>1byte에는 2의 8승에 해당하는 256개의 고유한 값을 저장할 수 있다.</li>
+</ol>
+<h2 id="아스키-ASCII"><a href="#아스키-ASCII" class="headerlink" title="아스키(ASCII)"></a>아스키(ASCII)</h2><p>아스키코드는 7비트 즉, 128개의 고유한 값만 사용한다.<br>왜 아스키 코드는 7비트만 활용할까? 그 이유는 1비트를 통신 에러 검출을 위해 사용하기 때문이다.</p>
+<p> 0부터 32까지는 인쇄와 전송 제어용으로 사용되는 알 수 없는 용어들이 가득하다.<br> 33부터 126까지는 숫자, 알파벳 소문자, 알파벳 대문자, 특수기호 등이 할당되어있는 것을 알 수 있다.</p>
+<h2 id="유니코드-Unicode"><a href="#유니코드-Unicode" class="headerlink" title="유니코드(Unicode)"></a>유니코드(Unicode)</h2><p>시간이 지나가면서 영어나 숫자 그리고 기본적인 기호뿐만 아니라 그 나라, 그 언어에서 쓰는 다양한 문자들을 처리하려면 1바이트로 정의된 아스키 코드를 확장할 필요가 있게 되었다. 유니코드는 이런 아스키코드의 한계성을 해소할 수 있는 체계로 만들어진 코드이다.<br>각 나라별 언어를 모두 표현하기 위해 나온 코드 체계가 유니코드(Unicode)이다. 유니코드는 사용중인 운영체제, 프로그램, 언어에 관계없이 문자마다 고유한 코드 값을 제공하는 새로운 개념의 코드이다. 언어와 상관없이 모든 문자를 16비트로 표현하므로 최대 65,536자까지 표현할 수 있다.<br><em>유니코드 인코딩 방식으로는 UTF-7, UTF-8, UTF-16, UTF-32 인코딩 등이 있다.</em></p>
+<p>한글은 자음과 모음의 조합 가능 개수만 따져도 가뿐히 128개를 넘는다. 중국어 역시 한자의 개수가 만 개가 넘는데, 이를 어떻게 아스키 코드에 담을 수 있을까? 그래서 용량을 크게 확장한 2byte (2의 16승 = 65536)의 유니코드가 등장하게 되었다.</p>
+
         </div>
         
         
@@ -220,7 +232,7 @@
         <div class="level-start">
             <a class="level level-item has-link-grey  article-nav-prev" href="/2019/10/01/concept/01_compiler_interpreter/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">compiler, interpreter</span>
+                <span class="level-item">컴파일, 인터프리터 언어</span>
             </a>
         </div>
         
@@ -290,7 +302,7 @@
                         Categories
                     </p>
                     <p class="title has-text-weight-normal">
-                        7
+                        5
                     </p>
                 </div>
             </div>
@@ -403,46 +415,14 @@
             </h3>
             <ul class="menu-list">
             <li>
-        <a class="level is-marginless" href="/categories/javascript/">
-            <span class="level-start">
-                <span class="level-item">javascript</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">2</span>
-            </span>
-        </a><ul><li>
-        <a class="level is-marginless" href="/categories/javascript/variable-변수/">
-            <span class="level-start">
-                <span class="level-item">variable(변수)</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li><li>
-        <a class="level is-marginless" href="/categories/javascript/개발환경/">
-            <span class="level-start">
-                <span class="level-item">개발환경</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li></ul></li><li>
         <a class="level is-marginless" href="/categories/study/">
             <span class="level-start">
                 <span class="level-item">study</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">7</span>
+                <span class="level-item tag">9</span>
             </span>
         </a><ul><li>
-        <a class="level is-marginless" href="/categories/study/code-concept/">
-            <span class="level-start">
-                <span class="level-item">code-concept</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">3</span>
-            </span>
-        </a></li><li>
         <a class="level is-marginless" href="/categories/study/internet/">
             <span class="level-start">
                 <span class="level-item">internet</span>
@@ -451,9 +431,25 @@
                 <span class="level-item tag">1</span>
             </span>
         </a></li><li>
+        <a class="level is-marginless" href="/categories/study/javascript/">
+            <span class="level-start">
+                <span class="level-item">javascript</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
         <a class="level is-marginless" href="/categories/study/javascript-basic/">
             <span class="level-start">
                 <span class="level-item">javascript-basic</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/study/개념이해/">
+            <span class="level-start">
+                <span class="level-item">개념이해</span>
             </span>
             <span class="level-end">
                 <span class="level-item tag">3</span>
@@ -489,7 +485,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-01T09:31:00.095Z">2019-10-01</time></div>
                     <a href="/2019/10/01/javascript/01_variable/" class="title has-link-black-ter is-size-6 has-text-weight-normal">variable (변수)</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/javascript/">javascript</a> / <a class="has-link-grey -link" href="/categories/javascript/variable-변수/">variable(변수)</a>
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
                     </p>
                 </div>
             </div>
@@ -499,16 +495,16 @@
             
             <a href="/2019/10/01/javascript/00_development-environment/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="기본 개념과 동작원리 이해의 중요성">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="자바스크립트 개발 환경 및 실행 환경">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-01T09:29:05.738Z">2019-10-01</time></div>
-                    <a href="/2019/10/01/javascript/00_development-environment/" class="title has-link-black-ter is-size-6 has-text-weight-normal">기본 개념과 동작원리 이해의 중요성</a>
+                    <a href="/2019/10/01/javascript/00_development-environment/" class="title has-link-black-ter is-size-6 has-text-weight-normal">자바스크립트 개발 환경 및 실행 환경</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/javascript/">javascript</a> / <a class="has-link-grey -link" href="/categories/javascript/개발환경/">개발환경</a>
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
                     </p>
                 </div>
             </div>
@@ -527,7 +523,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-01T09:23:09.943Z">2019-10-01</time></div>
                     <a href="/2019/10/01/concept/02_javascript_ECMAScript/" class="title has-link-black-ter is-size-6 has-text-weight-normal">javascript VS ECMAScript</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/code-concept/">code-concept</a>
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/개념이해/">개념이해</a>
                     </p>
                 </div>
             </div>
@@ -537,16 +533,16 @@
             
             <a href="/2019/10/01/concept/01_compiler_interpreter/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="compiler, interpreter">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="컴파일, 인터프리터 언어">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-01T09:17:39.368Z">2019-10-01</time></div>
-                    <a href="/2019/10/01/concept/01_compiler_interpreter/" class="title has-link-black-ter is-size-6 has-text-weight-normal">compiler, interpreter</a>
+                    <a href="/2019/10/01/concept/01_compiler_interpreter/" class="title has-link-black-ter is-size-6 has-text-weight-normal">컴파일, 인터프리터 언어</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/code-concept/">code-concept</a>
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/개념이해/">개념이해</a>
                     </p>
                 </div>
             </div>
@@ -556,16 +552,16 @@
             
             <a href="/2019/10/01/concept/00_ascii-code_uini-code/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="ascii-code,uini-code">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="아스키코드,유니코드">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-01T09:05:51.310Z">2019-10-01</time></div>
-                    <a href="/2019/10/01/concept/00_ascii-code_uini-code/" class="title has-link-black-ter is-size-6 has-text-weight-normal">ascii-code,uini-code</a>
+                    <a href="/2019/10/01/concept/00_ascii-code_uini-code/" class="title has-link-black-ter is-size-6 has-text-weight-normal">아스키코드,유니코드</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/code-concept/">code-concept</a>
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/개념이해/">개념이해</a>
                     </p>
                 </div>
             </div>
@@ -654,7 +650,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-01T09:31:00.095Z">2019-10-01</time></div>
                     <a href="/2019/10/01/javascript/01_variable/" class="title has-link-black-ter is-size-6 has-text-weight-normal">variable (변수)</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/javascript/">javascript</a> / <a class="has-link-grey -link" href="/categories/javascript/variable-변수/">variable(변수)</a>
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
                     </p>
                 </div>
             </div>
@@ -664,16 +660,16 @@
             
             <a href="/2019/10/01/javascript/00_development-environment/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="기본 개념과 동작원리 이해의 중요성">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="자바스크립트 개발 환경 및 실행 환경">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-01T09:29:05.738Z">2019-10-01</time></div>
-                    <a href="/2019/10/01/javascript/00_development-environment/" class="title has-link-black-ter is-size-6 has-text-weight-normal">기본 개념과 동작원리 이해의 중요성</a>
+                    <a href="/2019/10/01/javascript/00_development-environment/" class="title has-link-black-ter is-size-6 has-text-weight-normal">자바스크립트 개발 환경 및 실행 환경</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/javascript/">javascript</a> / <a class="has-link-grey -link" href="/categories/javascript/개발환경/">개발환경</a>
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
                     </p>
                 </div>
             </div>
@@ -692,7 +688,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-01T09:23:09.943Z">2019-10-01</time></div>
                     <a href="/2019/10/01/concept/02_javascript_ECMAScript/" class="title has-link-black-ter is-size-6 has-text-weight-normal">javascript VS ECMAScript</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/code-concept/">code-concept</a>
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/개념이해/">개념이해</a>
                     </p>
                 </div>
             </div>
@@ -702,16 +698,16 @@
             
             <a href="/2019/10/01/concept/01_compiler_interpreter/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="compiler, interpreter">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="컴파일, 인터프리터 언어">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-01T09:17:39.368Z">2019-10-01</time></div>
-                    <a href="/2019/10/01/concept/01_compiler_interpreter/" class="title has-link-black-ter is-size-6 has-text-weight-normal">compiler, interpreter</a>
+                    <a href="/2019/10/01/concept/01_compiler_interpreter/" class="title has-link-black-ter is-size-6 has-text-weight-normal">컴파일, 인터프리터 언어</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/code-concept/">code-concept</a>
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/개념이해/">개념이해</a>
                     </p>
                 </div>
             </div>
@@ -721,16 +717,16 @@
             
             <a href="/2019/10/01/concept/00_ascii-code_uini-code/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="ascii-code,uini-code">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="아스키코드,유니코드">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-01T09:05:51.310Z">2019-10-01</time></div>
-                    <a href="/2019/10/01/concept/00_ascii-code_uini-code/" class="title has-link-black-ter is-size-6 has-text-weight-normal">ascii-code,uini-code</a>
+                    <a href="/2019/10/01/concept/00_ascii-code_uini-code/" class="title has-link-black-ter is-size-6 has-text-weight-normal">아스키코드,유니코드</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/code-concept/">code-concept</a>
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/개념이해/">개념이해</a>
                     </p>
                 </div>
             </div>
@@ -800,7 +796,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="ascii-code,uini-code" height="28">
+                    <img src="/images/logo.svg" alt="아스키코드,유니코드" height="28">
                 
                 </a>
                 <p class="is-size-7">
