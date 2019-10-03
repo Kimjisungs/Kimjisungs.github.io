@@ -94,3 +94,22 @@
         $('.navbar-main .catalogue').on('click', toggleToc);
     }
 })(jQuery);
+
+
+var cardJ = document.querySelectorAll('.card');
+var urlJ = document.location.href;
+var localJ = 'http://localhost:4000/';
+var globalJ = 'https://kimjisungs.github.io/'
+var section = document.querySelector('section');
+
+
+if(urlJ !== localJ && urlJ !== globalJ) {
+    section.classList.add('sub-section');
+}
+
+// for(var s=0;s<cardJ.length;s++) {
+//     cardJ[s].addEventListener('click', function(){
+//         if(urlJ === localJ) alert(urlJ);
+//         //alert(urlJ);
+//     });
+// };
