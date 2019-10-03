@@ -63,7 +63,7 @@
 .widget .has-text-centered figure.image {
     width: 100%;
     height: 0;
-    padding-bottom: 100%;
+    padding-bottom: 90%;
     overflow: hidden;
 }
 
@@ -80,6 +80,10 @@
 /* 두번째 컨텐츠 섹션 */
 .has-order-2 .card-content {
     padding: 2rem;
+}
+
+.card {
+    background-color: #fbfbfb;
 }
 @media screen and (min-width: 1280px) {
     .has-order-2 {
@@ -120,7 +124,7 @@
 
 /* 공통 */
 .section {
-    background-color: #eee;
+    background-color: #e6e6e6;
 }
 
 .content h2:not(:first-child) {
@@ -157,7 +161,8 @@
 
 .card-transparent {
     flex: none !important;
-    width: 100%;
+    float: none;
+    width: 100% !important;
     color: transparent;
 }
 
