@@ -112,17 +112,6 @@
     }
 }
 
-.content h2:not(:first-child) {
-    margin-top: 2em;
-}
-.content h2 {
-    margin: 2rem 0 0.4em;
-    padding-bottom: 0.5em;
-    font-weight: 500;
-    border-bottom: 1px dashed #d1d1d1;
-}
-
-
 /* 세번째 컨텐츠 섹션 */
 .has-order-3,
 .column-right-shadow {
@@ -130,6 +119,29 @@
 }
 
 /* 공통 */
+.section {
+    background-color: #eee;
+}
+
+.content h2:not(:first-child) {
+    margin-top: 2em;
+}
+
+.content h2 {
+    margin: 2rem 0 0.4em;
+    padding-bottom: 0.5em;
+    font-weight: 500;
+    border-bottom: 1px dashed #d1d1d1;
+}
+
+.content h3 {
+    margin: 1em 0 0.4em;
+}
+
+.content p:not(:last-child), .content dl:not(:last-child), .content ol:not(:last-child), .content ul:not(:last-child), .content blockquote:not(:last-child), .content pre:not(:last-child), .content table:not(:last-child) {
+    margin-bottom: 0.6em;
+}
+
 .level-left span {
     display: none;
 }
