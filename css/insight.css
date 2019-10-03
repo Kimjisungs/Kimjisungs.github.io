@@ -63,6 +63,89 @@
 .widget .has-text-centered figure.image {
     width: 100%;
     height: 0;
-    padding-bottom: 120%;
+    padding-bottom: 100%;
     overflow: hidden;
+}
+
+/* 첫번째 컨텐츠 섹션 */
+/* .has-order-1 .level .button.is-rounded {
+    display: none;
+} */
+@media screen and (min-width: 1280px) {
+    /* .has-order-1 {
+        width: 30% !important;
+    } */
+}
+
+/* 두번째 컨텐츠 섹션 */
+.has-order-2 .card-content {
+    padding: 2rem;
+}
+@media screen and (min-width: 1280px) {
+    .has-order-2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        /* align-content: space-between; */
+        width: 75% !important;
+    }
+    .has-order-2 .card {
+        
+        margin-top: 0;
+        /* flex: 1 0 49.5%; */
+        margin-bottom: 1%;
+        flex: none;
+        min-width: 49.5%;
+    }
+    /* .pace-done .has-order-2 {
+        display: block;
+    } */
+    
+}
+
+.content h2:not(:first-child) {
+    margin-top: 2em;
+}
+.content h2 {
+    margin: 2rem 0 0.4em;
+    padding-bottom: 0.5em;
+    font-weight: 500;
+    border-bottom: 1px dashed #d1d1d1;
+}
+
+
+/* 세번째 컨텐츠 섹션 */
+.has-order-3,
+.column-right-shadow {
+    display: none;
+}
+
+/* 공통 */
+.level-left span {
+    display: none;
+}
+
+.level-left time,
+.level-left div {
+    /* text-transform: lowercase; */
+}
+
+.level-left .level-item {
+    color: #ddd;
+}
+
+.card-transparent {
+    flex: none !important;
+    width: 100%;
+    color: transparent;
+}
+
+@media screen and (min-width: 1280px) {
+    a.has-link-black-ter {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 393px;
+        display: block;
+    }
 }
