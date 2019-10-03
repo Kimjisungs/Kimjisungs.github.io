@@ -72,9 +72,9 @@
     display: none;
 } */
 @media screen and (min-width: 1280px) {
-    /* .has-order-1 {
+    .has-order-1 {
         width: 30% !important;
-    } */
+    }
 }
 
 /* 두번째 컨텐츠 섹션 */
@@ -89,7 +89,7 @@
         flex-wrap: wrap;
         justify-content: space-between;
         /* flex-direction: column; */
-        width: 75% !important;
+        width: 70% !important;
     }
     .has-order-2 .card {
         /* height: 50%; */
@@ -159,6 +159,10 @@
     flex: none !important;
     width: 100%;
     color: transparent;
+}
+
+.highlight.javascript figcaption {
+    display: none;
 }
 
 @media screen and (min-width: 1280px) {
