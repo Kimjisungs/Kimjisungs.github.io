@@ -7,18 +7,18 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>javascript VS ECMAScript - js-study</title>
+<title>메모리와 메모리 구조 - js-study</title>
 
 
     <meta property="og:type" content="article">
-<meta property="og:title" content="javascript VS ECMAScript">
-<meta property="og:url" content="https://kimjisungs.github.io/2019/10/01/concept/02_javascript_ECMAScript/index.html">
+<meta property="og:title" content="메모리와 메모리 구조">
+<meta property="og:url" content="https://kimjisungs.github.io/2019/10/04/concept/05_memory/index.html">
 <meta property="og:site_name" content="js-study">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://kimjisungs.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-10-02T13:21:51.146Z">
+<meta property="og:updated_time" content="2019-10-04T13:49:04.511Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="javascript VS ECMAScript">
+<meta name="twitter:title" content="메모리와 메모리 구조">
 <meta name="twitter:image" content="https://kimjisungs.github.io/images/og_image.png">
 
 
@@ -89,7 +89,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="javascript VS ECMAScript" height="28">
+                <img src="/images/logo.svg" alt="메모리와 메모리 구조" height="28">
             
             </a>
         </div>
@@ -145,7 +145,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-10-01T09:23:09.943Z">2019-10-01</time>
+                <time class="level-item has-text-grey" datetime="2019-10-04T12:14:32.756Z">2019-10-04</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/study/">study</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/study/개념이해/">개념이해</a>
@@ -155,7 +155,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 minutes read (About 298 words)
+                    5 minutes read (About 792 words)
                 </span>
                 
                 
@@ -164,21 +164,28 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                javascript VS ECMAScript
+                메모리와 메모리 구조
             
         </h1>
         <div class="content">
             <p><span></span></p>
 <a id="more"></a>
 
-<h2 id="ECMA-Script란"><a href="#ECMA-Script란" class="headerlink" title="ECMA Script란?"></a>ECMA Script란?</h2><p>MS의 Jscript와 javascript가 너무 재각각이라 표준이 필요하게 되었는데, 표준을 위해 자바스크립트를 ECMA(European Computer Manufacturers Assocation)라는 정보통신시스템 비영리 표준 기구에 제출하였고, 표준에 대한 작업을 ECMA-262란 이름으로 채택되었다.  <strong>ECMA</strong>라는 단체에서 기존의 결점을 보완한 표준 자바스크립트 버전을 매년 발표한다. ES는 바로 <strong>EcmaScript</strong>의 줄임말이다.  ECMAScript는 모두가 동일한 환경에서 볼 수 있게 구현된Javascript의 표준화된 언어.</p>
-<p>ES3(1999), ES5(2009), ES 2015(ES 6)</p>
-<h2 id="Javascript"><a href="#Javascript" class="headerlink" title="Javascript"></a>Javascript</h2><p>ECMAScript 표준(ECMA-262)를 바탕으로 구현된언어. Javascript 가 실행되기 위해서는 Javascript Engine(interpreter)가 필요한다. 웹브라우저마다 다른 Javascript  Engine을 가지고 있어서 ECMAScript spec차이가 생긴다.</p>
+
+
+<h2 id="메모리란-무엇인가"><a href="#메모리란-무엇인가" class="headerlink" title="메모리란 무엇인가"></a>메모리란 무엇인가</h2><p>여러개의 비트로 구성된 하나의 배열로 볼 수 있으며 우리는 여기에 무언가 읽고 쓸 수 있다.  8비트는 1바이트라고 하고 바이트가 모이면 워드가 된다. 메모리에는 많은것들이 저장된다.</p>
 <ol>
-<li>ECMA-262에서 정의하는 ECMAScript 핵심 기능을 제공</li>
-<li>문서 객체모델 (DOM)을 웹페이지 콘텐츠를 조작하는 메서드와 인터페이스 제공</li>
-<li>브라우저 객체 모델(BOM), 브라우저와 상호작용하는 메서드와 인터페이스를 제공.</li>
+<li>프로그램에서 사용되는 모든 변수와 기타 데이터</li>
+<li>운영체계 및 개별 프로그램의 코드</li>
 </ol>
+<h3 id="메모리-생존-주기"><a href="#메모리-생존-주기" class="headerlink" title="메모리 생존 주기"></a>메모리 생존 주기</h3><p><strong>메모리 할당(allocate)</strong> : 프로그램이 사용할 수 있도록 운영체계가 메모리를 할당한다. 저수준 언어에서는 개발자가 명시적으로 처리해줘야 하지만 자바스크립트 같은 고수준 언어에서는 자동으로 해준다.</p>
+<p><strong>메모리 사용(use)</strong> : 할당된 메모리를 실제 프로그램이 사용하는 단계. 개발자가 코드상에서 할당된 변수를 사용함으로써 읽기와 쓰기 작업이 이루어진다.</p>
+<p><strong>메모리 해제(release)</strong> : 프로그램에서 필요하지 않은 메모리 전체를 돌려주어 다시 사용가능하게 만드는 단계. 메모리 할당 작업과 마찬가지로 저수준 언어에서는 이를 명시적으로 처리해야한다.  자바스크립트는 가비지 컬렉터로 인해 자동적으로 처리한다.</p>
+<h3 id="자바스크립트에서의-메모리-할당"><a href="#자바스크립트에서의-메모리-할당" class="headerlink" title="자바스크립트에서의 메모리 할당"></a>자바스크립트에서의 메모리 할당</h3><p>자바스크립트는 개발자들의 메모리 할당의 책임에서 해방시켜주었다. <strong>변수 선언 시점</strong>에 메모리 할당을 스스로 수행한다. 함수에서도 메모리 할당이 일어난다.</p>
+<h2 id="메모리-관리"><a href="#메모리-관리" class="headerlink" title="메모리 관리"></a>메모리 관리</h2><h3 id="메모리가-더-이상-필요하지-않을-때-해제"><a href="#메모리가-더-이상-필요하지-않을-때-해제" class="headerlink" title="메모리가 더 이상 필요하지 않을 때 해제"></a>메모리가 더 이상 필요하지 않을 때 해제</h3><p>고수준의 언어에서는 <strong>가비지콜렉터(garbage collector)</strong>라는 소프트웨어가 내장되어 있는데 이것의 역할은 메모리 할당을 추적하고 메모리가 더 이상 필요 없어졌을 때 해제하는 작업을 한다. 이 작업은 근사한 작업인데 왜냐하면 어떤 메모리가 필요없는지 알아내는것을 알고리즘으로 풀 수 없는 비결정적인 문제이기 때문이다.</p>
+<h3 id="가비지-콜렉션"><a href="#가비지-콜렉션" class="headerlink" title="가비지 콜렉션"></a>가비지 콜렉션</h3><p>‘더 이상 필요없는’ 모든 메모리를 찾는건 비 결정적이다. 따라서 몇가지 제한을 두어 ‘더 이상 필요없는 모든 메모리’가 아니라 ‘더 이상 필요없는 몇몇 메모리’를 찾아본다.</p>
+<h4 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h4><p>가비지 콜렉션 알고리즘의 핵심 개념은 참조이다. A라는 메모리를 통해 B라는 메모리에 접근한다면 B는 A에 참조된다 라고한다. prototype을 암시적으로 참조하고 그 오브젝트의 속성을 명시적으로 참조한다.</p>
+<p>가비지 콜렉션은 어떤 오브젝트를 참조하는 다른 오브젝트가 하나도 없다면 그 오브젝트에 대해 가비지 콜렉션을 수행한다.</p>
 
         </div>
         
@@ -228,17 +235,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/10/01/javascript/00_development-environment/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">개발 환경 및 실행 환경</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/10/01/concept/01_compiler_interpreter/">
-                <span class="level-item">컴파일, 인터프리터 언어</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/10/04/concept/04_keyword_assign_Identifier/">
+                <span class="level-item">키워드, 할당, 식별자</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -791,7 +791,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="javascript VS ECMAScript" height="28">
+                    <img src="/images/logo.svg" alt="메모리와 메모리 구조" height="28">
                 
                 </a>
                 <p class="is-size-7">
