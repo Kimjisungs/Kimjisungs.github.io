@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="js-study">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://kimjisungs.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-10-03T03:39:31.182Z">
+<meta property="og:updated_time" content="2019-10-04T04:32:53.277Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="웹 동작 원리">
 <meta name="twitter:image" content="https://kimjisungs.github.io/images/og_image.png">
@@ -174,13 +174,20 @@
 
 
 <h2 id="웹-브라우저는-어떻게-작동하는가"><a href="#웹-브라우저는-어떻게-작동하는가" class="headerlink" title="웹 브라우저는 어떻게 작동하는가?"></a>웹 브라우저는 어떻게 작동하는가?</h2><h3 id="작동-순서"><a href="#작동-순서" class="headerlink" title="작동 순서"></a>작동 순서</h3><ol>
-<li><strong>사용자 도메인 입력.</strong><br>비연결성 프로토콜의 특징을 가지고 있는 http는 규약에 따라 사용자의 도메인입력으로 요청(request) 준비를 한다.</li>
-<li><strong>먼저 접속하려고 하는 도메인에 연결된 DNS(네임서버)로 접속하여 서버 IP를 요청한다.</strong> </li>
-<li><strong>요청 받은 네임서버는 서버 IP주소를 찾은 뒤, 사용자 컴퓨터에게 IP를 알려준다.</strong><br>DNS 서버는, IP주소 변환 뿐만 아니라 위조된 사이트로 이동되는것을 막아주고 특정사이트에 접속되지 않거나 경고 메세지를 보여주는 페이지로 이동하는 등의 추가 동작을 한다.</li>
-<li><strong>컴퓨터는 전달 받은 서버 IP로 접속하여 도메인을 입력한 페이지의 정보를 요청(request)한다.</strong></li>
-<li><strong>서버는 요청을 받아서 페이지(html,css,javascript)를 브라우저에 http의 규약에 따라 응답(reponse) 하여 준다.</strong></li>
-<li><strong>브라우저는 응답받은 정보를 다운로드하여 파싱한다.</strong></li>
-<li><strong>html,css가 Rendering Engine에 의해 파싱되고, javascript가 javascript Engine에 의해 파싱되는데, 인터프리터 성격을 가진 이 언어들이 순서에 따라 파싱하여 랜더링된 후에  browser에 프린트되어진다.</strong><br>이때 태그의 위치에 따라 블로킹이 발생하여 DOM의 생성이 지연될 수 있기 때문에 script의 위치가 중요하다. 그래서 DOM이 완전히 생성 된 후 script가 실행될 수 있도록 body 최하단에 위치 시킨다. async 및 defer을 사용하면 html,css 파싱완료 후 실행할 수 있다.</li>
+<li><p><strong>사용자 도메인 입력.</strong><br>비연결성 프로토콜의 특징을 가지고 있는 http는 규약에 따라 사용자의 도메인입력으로 요청(request) 준비를 한다.</p>
+</li>
+<li><p><strong>먼저 접속하려고 하는 도메인에 연결된 DNS(네임서버)로 접속하여 서버 IP를 요청한다.</strong> </p>
+</li>
+<li><p><strong>요청 받은 네임서버는 서버 IP주소를 찾은 뒤, 사용자 컴퓨터에게 IP를 알려준다.</strong><br>DNS 서버는, IP주소 변환 뿐만 아니라 위조된 사이트로 이동되는것을 막아주고 특정사이트에 접속되지 않거나 경고 메세지를 보여주는 페이지로 이동하는 등의 추가 동작을 한다.</p>
+</li>
+<li><p><strong>컴퓨터는 전달 받은 서버 IP로 접속하여 도메인을 입력한 페이지의 정보를 요청(request)한다.</strong></p>
+</li>
+<li><p><strong>서버는 요청을 받아서 페이지(html,css,javascript)를 브라우저에 http의 규약에 따라 응답(reponse) 하여 준다.</strong></p>
+</li>
+<li><p><strong>브라우저는 응답받은 정보를 다운로드하여 파싱한다.</strong></p>
+</li>
+<li><p><strong>html,css가 Rendering Engine에 의해 파싱되고, javascript가 javascript Engine에 의해 파싱되는데, 인터프리터 성격을 가진 이 언어들이 순서에 따라 파싱하여 랜더링된 후에  browser에 프린트되어진다.</strong><br>이때 태그의 위치에 따라 블로킹이 발생하여 DOM의 생성이 지연될 수 있기 때문에 script의 위치가 중요하다. 그래서 DOM이 완전히 생성 된 후 script가 실행될 수 있도록 body 최하단에 위치 시킨다. async 및 defer을 사용하면 html,css 파싱완료 후 실행할 수 있다.</p>
+</li>
 </ol>
 <h3 id="HTTP란"><a href="#HTTP란" class="headerlink" title="HTTP란?"></a>HTTP란?</h3><p><strong>HTTP</strong>(Hypertext Transfer Protocol)란 브라우저 같은 응용 프로그램을 통해 사용자와 서버사이 데이터를 전송하는 프로토콜(통신 규약)로  <strong>WWW</strong>(World Wide Web)의 분산되어 있는 서버와 사용자간에 하이퍼 텍스트를 이용한 정보 교환이 가능하게 만든다.</p>
 <p><strong>GET/ HTTP/ 1.1 **  -&gt; 요청 라인<br>**Host : <a href="http://www.naver.com" target="_blank" rel="noopener">www.naver.com</a></strong> -&gt; 일반해더, 요청해더, 엔티티 헤더, crlf<br><strong>User-Agent:</strong> Mozilla/5.0 </p>
