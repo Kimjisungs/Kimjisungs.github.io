@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="js-study">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://kimjisungs.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-10-02T11:09:47.109Z">
+<meta property="og:updated_time" content="2019-10-07T08:48:37.979Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="연산자">
 <meta name="twitter:image" content="https://kimjisungs.github.io/images/og_image.png">
@@ -155,7 +155,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    10 minutes read (About 1447 words)
+                    10 minutes read (About 1465 words)
                 </span>
                 
                 
@@ -182,6 +182,7 @@
 <figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> x; <span class="hljs-comment">// 변수 선언문은 표현식이 아닌 문이다.</span></span><br><span class="line">x = <span class="hljs-number">100</span>; <span class="hljs-comment">// 할당문 자체가 표현식이지만 완전한 문이기도 하다. 즉 할당문은 표현식인 문이다.</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">var</span> foo = <span class="hljs-keyword">var</span> x; <span class="hljs-comment">// 표현식이 아닌 문은 값처럼 사용할 수 없다.</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">var</span> foo = x = <span class="hljs-number">100</span>; <span class="hljs-comment">// 표현식인 문은 값처럼 사용할 수 없다.</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(foo); <span class="hljs-comment">//100</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="연산자란"><a href="#연산자란" class="headerlink" title="연산자란?"></a>연산자란?</h2><p>하나 이상의 표현식을 대상으로 산술, 할당, 비교, 논리, 타입 연산 등을 수행해 하나의 값을 만든다. 이때 연산의 대상을 피연산자라고 한다. 연산자는 값으로 평가된 피연산자를 연산해 새로운 값을 만든다.</p>
+<p><em>feat</em>. 피연산자는 표현식이면 된다.</p>
 <h3 id="이항-산술-연산자"><a href="#이항-산술-연산자" class="headerlink" title="이항 산술 연산자"></a>이항 산술 연산자</h3><p>2개의 피연산자를 산술연산하여 값을 만든다.<br>피연산자의 갑슬 변경하는 부수 효과는 없다. 언제나 새로운 값을 만든다.</p>
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+, -, *, /, %</span><br></pre></td></tr></table></figure>
 
@@ -218,6 +219,7 @@
 <figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> foo = <span class="hljs-literal">null</span>;</span><br><span class="line"><span class="hljs-keyword">typeof</span> foo === <span class="hljs-literal">null</span>; <span class="hljs-comment">// -&gt; false;</span></span><br><span class="line">foo === <span class="hljs-literal">null</span>; <span class="hljs-comment">// -&gt; true;</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="지수-연산자"><a href="#지수-연산자" class="headerlink" title="지수 연산자"></a>지수 연산자</h2><p>ES7에서 새롭게 도입된 지수 연산자는 좌항의 피연산자를 밑으로, 우항의 피연산자를 지수로 거듭 제곱하여 숫자 타입의 값을 반환한다.</p>
+<p>제곱연산자</p>
 
         </div>
         
@@ -326,7 +328,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        15
+                        17
                     </p>
                 </div>
             </div>
@@ -454,7 +456,7 @@
                 <span class="level-item">study</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">14</span>
+                <span class="level-item tag">16</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/study/internet/">
@@ -470,7 +472,7 @@
                 <span class="level-item">javascript</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">4</span>
+                <span class="level-item tag">6</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/study/javascript-basic/">
@@ -505,6 +507,44 @@
         <h3 class="menu-label">
             Recent
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/10/07/javascript/05_type-conversion/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="타입 변환과 단축 평가">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-07T09:16:52.832Z">2019-10-07</time></div>
+                    <a href="/2019/10/07/javascript/05_type-conversion/" class="title has-link-black-ter is-size-6 has-text-weight-normal">타입 변환과 단축 평가</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/10/07/javascript/04_control-statement/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="제어문">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-07T08:45:36.890Z">2019-10-07</time></div>
+                    <a href="/2019/10/07/javascript/04_control-statement/" class="title has-link-black-ter is-size-6 has-text-weight-normal">제어문</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -563,44 +603,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/10/02/javascript/03_operator/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="연산자">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-02T10:15:54.298Z">2019-10-02</time></div>
-                    <a href="/2019/10/02/javascript/03_operator/" class="title has-link-black-ter is-size-6 has-text-weight-normal">연산자</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/10/02/javascript/02_data-type/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="data-type">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-02T09:15:15.278Z">2019-10-02</time></div>
-                    <a href="/2019/10/02/javascript/02_data-type/" class="title has-link-black-ter is-size-6 has-text-weight-normal">data-type</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -619,7 +621,7 @@
                     <span class="level-item">October 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">13</span>
+                    <span class="level-item tag">15</span>
                 </span>
             </a>
         </li>
@@ -673,6 +675,44 @@
         
         <article class="media">
             
+            <a href="/2019/10/07/javascript/05_type-conversion/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="타입 변환과 단축 평가">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-07T09:16:52.832Z">2019-10-07</time></div>
+                    <a href="/2019/10/07/javascript/05_type-conversion/" class="title has-link-black-ter is-size-6 has-text-weight-normal">타입 변환과 단축 평가</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/10/07/javascript/04_control-statement/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="제어문">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-07T08:45:36.890Z">2019-10-07</time></div>
+                    <a href="/2019/10/07/javascript/04_control-statement/" class="title has-link-black-ter is-size-6 has-text-weight-normal">제어문</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/10/04/concept/05_memory/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="메모리와 메모리 구조">
@@ -728,44 +768,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/10/02/javascript/03_operator/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="연산자">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-02T10:15:54.298Z">2019-10-02</time></div>
-                    <a href="/2019/10/02/javascript/03_operator/" class="title has-link-black-ter is-size-6 has-text-weight-normal">연산자</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/10/02/javascript/02_data-type/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="data-type">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-02T09:15:15.278Z">2019-10-02</time></div>
-                    <a href="/2019/10/02/javascript/02_data-type/" class="title has-link-black-ter is-size-6 has-text-weight-normal">data-type</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -784,7 +786,7 @@
                     <span class="level-item">October 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">13</span>
+                    <span class="level-item tag">15</span>
                 </span>
             </a>
         </li>

@@ -7,17 +7,18 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>Archives: 2019/10 - js-study</title>
+<title>제어문 - js-study</title>
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="js-study">
-<meta property="og:url" content="https://kimjisungs.github.io/archives/2019/10/index.html">
+    <meta property="og:type" content="article">
+<meta property="og:title" content="제어문">
+<meta property="og:url" content="https://kimjisungs.github.io/2019/10/07/javascript/04_control-statement/index.html">
 <meta property="og:site_name" content="js-study">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://kimjisungs.github.io/images/og_image.png">
+<meta property="og:updated_time" content="2019-10-07T09:16:37.207Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js-study">
+<meta name="twitter:title" content="제어문">
 <meta name="twitter:image" content="https://kimjisungs.github.io/images/og_image.png">
 
 
@@ -88,7 +89,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="js-study" height="28">
+                <img src="/images/logo.svg" alt="제어문" height="28">
             
             </a>
         </div>
@@ -138,229 +139,128 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-10-07T08:45:36.890Z">2019-10-07</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/study/">study</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    7 minutes read (About 979 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                제어문
+            
+        </h1>
+        <div class="content">
+            <p><span> </span></p>
+<a id="more"></a>
 
-<div class="card widget">
+<h2 id="블록문"><a href="#블록문" class="headerlink" title="블록문"></a>블록문</h2><p>0개 이상의 문을 중괄호로 묶은 것으로 코드 블록 또는 블록 이라고 부르기도 한다. 블록문 끝에는 세미콜론을 붙이지 않는다.</p>
+<h2 id="조건문"><a href="#조건문" class="headerlink" title="조건문"></a>조건문</h2><p>조건식의 평가 결과에 따라 코드 블럭의 실행을 결정한다.</p>
+<h3 id="if-else문"><a href="#if-else문" class="headerlink" title="if, else문"></a>if, else문</h3><p>조건식의 평가 결과가 참(true)일 경우, if 문 다음의 코드 블록이 실행된다. 거짓(false)일 경우, else 문 다음의 코드 블록이 실행된다.</p>
+<p>조건식을 추가하고 싶으면 else if 문을 사용한다.</p>
+<p>삼항조건 연산자로 변경할 수 있다.</p>
+<h3 id="switch-문"><a href="#switch-문" class="headerlink" title="switch 문"></a>switch 문</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">switch</span>(표현식) &#123;</span><br><span class="line">	<span class="hljs-keyword">case</span> 표현식 <span class="hljs-number">1</span> : </span><br><span class="line">		<span class="hljs-keyword">switch</span> 문의 표현식 <span class="hljs-number">1</span>이 일치하면 실행</span><br><span class="line">		<span class="hljs-keyword">break</span>;</span><br><span class="line">	<span class="hljs-keyword">case</span> 표현식 <span class="hljs-number">2</span>;</span><br><span class="line">		<span class="hljs-keyword">switch</span> 문의 표현식 <span class="hljs-number">2</span>이 일치하면 실행</span><br><span class="line">		<span class="hljs-keyword">break</span>;</span><br><span class="line">	<span class="hljs-keyword">default</span> :</span><br><span class="line">		<span class="hljs-keyword">switch</span> 문의 표현식과 일치하는 표현식을 갖는 <span class="hljs-keyword">case</span> 문이 없을 때 실행될 문;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>switch 문은 논리적 참, 거짓보다는 다양한 상황(case)에 따라 실행할 코드 블록을 결정할 때 사용한다. case에 해당하는 문이 없다면 실행 순서는 default문으로 이동한다.</p>
+<h2 id="반복문"><a href="#반복문" class="headerlink" title="반복문"></a>반복문</h2><h3 id="for문"><a href="#for문" class="headerlink" title="for문"></a>for문</h3><ol>
+<li>for 문을 실행하면 가장 먼저 변수 선언문 var i = 0이 실행된다. 변수 선언문은 단 한번만 실행된다.</li>
+<li>변수 선언문의 실행이 종료되면 조건식으로 실행 순서가 이동한다. 현재 변수 i는 0이므로 조건식의 평가 결과는 true다.</li>
+<li>조건식의 평가 결과가 true이므로 실행 순서가 코드 블록으로 이동하여 실행된다. 증감문으로 실행 순서가 이동하는 것이 아니라 코드 블록으로 실행 순서가 이동하는 것에 주의하자.</li>
+<li>코드 블록의 실행이 종료하면 증감식으로 실행 순서가 이동한다. 증감식 i++가 실행되어 i는 1이 된다.</li>
+<li>증감식 실행이 종료되면 다시 조건식으로 실행 순서가 이동한다. 변수 선언문으로 실행 순서가 이동하는 것이 아니라 조건식으로 실행 순서가 이동하는 것에 주의하자. 변수 선언문은 단 한번만 실행된다. 현재 변수 i는 1이므로 조건식의 평가 결과는 true다.</li>
+<li>조건식의 평가 결과가 true이므로 실행 순서가 코드 블록으로 이동하여 실행된다.</li>
+<li>코드 블록의 실행이 종료하면 증감식으로 실행 순서가 이동한다. 증감식 i++가 실행되어 i는 2가 된다.</li>
+<li>증감식 실행이 종료되면 다시 조건식으로 실행 순서가 이동한다. 현재 변수 i는 2이므로 조건식의 평가 결과는 false다. 조건식의 평가 결과가 false이므로 for 문의 실행이 종료된다.</li>
+</ol>
+<h3 id="while문"><a href="#while문" class="headerlink" title="while문"></a>while문</h3><p>while 문은 주어진 조건식의 평가 결과가 참이면 코드 블록을 계속해서 반복 실행한다. 조건문의 평가 결과가 거짓이 되면 실행을 종료한다.</p>
+<h3 id="do-while문"><a href="#do-while문" class="headerlink" title="do while문"></a>do while문</h3><p>문은 코드 블록을 먼저 실행하고 조건식을 평가한다. 따라서 코드 블록은 무조건 한번 이상 실행된다.</p>
+<h3 id="break-문"><a href="#break-문" class="headerlink" title="break 문"></a>break 문</h3><p> break 문은 코드 블록을 탈출한다. 좀 더 정확히 표현하자면 코드 블록을 탈출하는 것이 아니라 레이블 문, 반복문(for, for…in, for…of, while, do…while) 또는 switch 문의 코드 블록을 탈출한다. 레이블 문, 반복문, switch 문의 코드 블록 이외에 break 문을 사용하면 SyntaxError(문법 에러)가 발생한다.</p>
+<h3 id="continue-문"><a href="#continue-문" class="headerlink" title="continue 문"></a>continue 문</h3><p>continue 문은 반복문의 코드 블록 실행을 현 지점에서 중단하고 반복문의 증감식으로 이동한다.</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
     <div class="card-content">
-        <h3 class="tag is-link">
-        October 2019
-        </h3>
-        <div class="timeline">
-        
-            <article class="media">
+        <h3 class="menu-label has-text-centered">Like this article? Support the author with</h3>
+        <div class="buttons is-centered">
+            
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-10-07T09:16:52.832Z">2019-10-07</time>
-                        <a href="/2019/10/07/javascript/05_type-conversion/" class="title has-link-black-ter is-size-6 has-text-weight-normal">타입 변환과 단축 평가</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
+<div class="notification is-danger">
+    You forgot to set the <code>qrcode</code> for Alipay. Please set it in <code>_config.yml</code>.
+</div>
+
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-10-07T08:45:36.890Z">2019-10-07</time>
-                        <a href="/2019/10/07/javascript/04_control-statement/" class="title has-link-black-ter is-size-6 has-text-weight-normal">제어문</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-10-04T12:14:32.756Z">2019-10-04</time>
-                        <a href="/2019/10/04/concept/05_memory/" class="title has-link-black-ter is-size-6 has-text-weight-normal">메모리와 메모리 구조</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/개념이해/">개념이해</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
+<div class="notification is-danger">
+    You forgot to set the <code>qrcode</code> for Wechat. Please set it in <code>_config.yml</code>.
+</div>
+
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-10-04T11:00:31.310Z">2019-10-04</time>
-                        <a href="/2019/10/04/concept/04_keyword_assign_Identifier/" class="title has-link-black-ter is-size-6 has-text-weight-normal">키워드, 할당, 식별자</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/개념이해/">개념이해</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
+                <!-- Visit https://www.paypal.com/donate/buttons/ to get your donate button -->
+
+<div class="notification is-danger">
+    You forgot to set the <code>business</code> and <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.
+</div>
+
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-10-02T13:20:43.087Z">2019-10-02</time>
-                        <a href="/2019/10/02/concept/03_web_works/" class="title has-link-black-ter is-size-6 has-text-weight-normal">웹 동작 원리</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/개념이해/">개념이해</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-10-02T10:15:54.298Z">2019-10-02</time>
-                        <a href="/2019/10/02/javascript/03_operator/" class="title has-link-black-ter is-size-6 has-text-weight-normal">연산자</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
+<div class="notification is-danger">
+    You forgot to set the <code>url</code> Patreon. Please set it in <code>_config.yml</code>.
+</div>
+
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-10-02T09:15:15.278Z">2019-10-02</time>
-                        <a href="/2019/10/02/javascript/02_data-type/" class="title has-link-black-ter is-size-6 has-text-weight-normal">data-type</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
-                
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-10-01T09:31:00.095Z">2019-10-01</time>
-                        <a href="/2019/10/01/javascript/01_variable/" class="title has-link-black-ter is-size-6 has-text-weight-normal">variable (변수)</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
-                
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-10-01T09:29:05.738Z">2019-10-01</time>
-                        <a href="/2019/10/01/javascript/00_development-environment/" class="title has-link-black-ter is-size-6 has-text-weight-normal">개발 환경 및 실행 환경</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
-                
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-10-01T09:23:09.943Z">2019-10-01</time>
-                        <a href="/2019/10/01/concept/02_javascript_ECMAScript/" class="title has-link-black-ter is-size-6 has-text-weight-normal">javascript VS ECMAScript</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/개념이해/">개념이해</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
         </div>
     </div>
 </div>
 
 
 
-    
 <div class="card card-transparent">
-    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
-        <div class="pagination-previous is-invisible is-hidden-mobile">
-            <a class="is-flex-grow has-text-black-ter" href="/archives/2019/10/page/0/">Previous</a>
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/10/07/javascript/05_type-conversion/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">타입 변환과 단축 평가</span>
+            </a>
         </div>
-        <div class="pagination-next">
-            <a class="is-flex-grow has-text-black-ter" href="/archives/2019/10/page/2/">Next</a>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/10/04/concept/05_memory/">
+                <span class="level-item">메모리와 메모리 구조</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
         </div>
-        <ul class="pagination-list is-hidden-mobile">
-            
-            <li><a class="pagination-link is-current" href="/archives/2019/10/">1</a></li>
-            
-            <li><a class="pagination-link has-text-black-ter" href="/archives/2019/10/page/2/">2</a></li>
-            
-        </ul>
-    </nav>
+        
+    </div>
 </div>
+
+
 </div>
                 
 
@@ -905,7 +805,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="js-study" height="28">
+                    <img src="/images/logo.svg" alt="제어문" height="28">
                 
                 </a>
                 <p class="is-size-7">

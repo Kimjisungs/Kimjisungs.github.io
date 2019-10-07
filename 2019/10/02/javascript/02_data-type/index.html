@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="js-study">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://kimjisungs.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-10-03T12:40:43.962Z">
+<meta property="og:updated_time" content="2019-10-07T06:52:56.875Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="data-type">
 <meta name="twitter:image" content="https://kimjisungs.github.io/images/og_image.png">
@@ -155,7 +155,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3 minutes read (About 506 words)
+                    7 minutes read (About 1096 words)
                 </span>
                 
                 
@@ -171,12 +171,24 @@
             <p><span> </span></p>
 <a id="more"></a>
 
+<p><em>feat</em>. 식을 평가해서 값을 만든다. </p>
 <h2 id="데이터타입"><a href="#데이터타입" class="headerlink" title="데이터타입"></a>데이터타입</h2><p>자바스크립트의 모든 값은 데이터 타입을 갖는다. 데이터 타입은 값으 종류를 이야기 한다. 데이터 타입이 필요한 이유는 아래와 같다.</p>
 <ul>
 <li>값을 저장할 때 확보해야 하는 <strong>메모리 공간의 크기</strong>를 결정하기 위해</li>
 <li>값을 참조할 때 한번에 읽어 들여야 할 <strong>메모리 공간의 크기</strong>를 결정하기 위해</li>
 <li>메모리에서 읽어 들인 <strong>2진수를 어떻게 해석</strong>할 지를 결정하기 위해</li>
 </ul>
+<p><em>feat.</em> 모든 값은 타입이 있다.<br>자바스크립트 타입을 사용하는 이유</p>
+<ol>
+<li>타입을 알아야 메모리 공간을 확보할 수 있다.<br>-몇 바이트 가지고 와야 하는지 타입을알아야함<br>-값을 가지고 왔는데 그 값을 어떻게 해석해야하는가<br>-타입마다 확보해야할 메모리 공간의 차이가 제 각각 이다.<br>-8바이트 단위로 가져와야함. 식별자가 알고있어야 한다. </li>
+</ol>
+<h2 id="값"><a href="#값" class="headerlink" title="값"></a>값</h2><p>값은 더 이상 평가할 수 없는 하나의 표현식이다. 평가의 결과물은 값이다. 이것을 표현식이라고 한다. 표현식은 평가되어 하나의 값을 만든다. 더 이상 평가할 수 없는것을 값이라고 한다.  </p>
+<h3 id="이항연산자"><a href="#이항연산자" class="headerlink" title="이항연산자"></a>이항연산자</h3><p>피연산자가 두개인것</p>
+<h3 id="단항연산자"><a href="#단항연산자" class="headerlink" title="단항연산자"></a>단항연산자</h3><p>피연산자가 하나인것</p>
+<h3 id="리터럴-표기법"><a href="#리터럴-표기법" class="headerlink" title="리터럴 표기법"></a>리터럴 표기법</h3><p>리터럴을 이용해서 값을 만들어내는것을 리터럴 표기법이라고 한다. 값을 만들어내는 가장 기본적인 방식<br>30이라고 쓴 그자체를 리터럴 표기법으로 값의 생성을 지시하였다. </p>
+<h3 id="표현식"><a href="#표현식" class="headerlink" title="표현식"></a>표현식</h3><p>리터럴로 만들어진 값. 표현식은 하나 이상의 리터럴, 하나이상의 연산자로 이루어져 있는 문이다. 값을 만들어내는 방식이다. 표현식은 평가가 되는데 자바스크립트엔진에 의해서 평가되어 30이라는 새로운 값을 만들어 낸다. 값을 생성하는 문이다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> sum = <span class="hljs-number">10</span> + <span class="hljs-number">20</span>; <span class="hljs-comment">//10 + 20을 평가한 후에 30이 만들어 진다.</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="값의-생성"><a href="#값의-생성" class="headerlink" title="값의 생성"></a>값의 생성</h2><p>값은 다양한 방법으로 생성할 수 있는데 가장 기본적인 방법은 리터럴 표기법이다. </p>
 <p><strong>리터럴</strong></p>
 <ol>
@@ -189,16 +201,27 @@
 <figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> score = <span class="hljs-number">50</span> + <span class="hljs-number">50</span>;</span><br></pre></td></tr></table></figure>
 
 <p>값을 생성하는 문을 표현식이라고 한다.</p>
-<h3 id="표현식"><a href="#표현식" class="headerlink" title="표현식"></a>표현식</h3><p>표현식은 하나의 값으로 평가될 수 있는 문이다.</p>
+<h3 id="표현식-1"><a href="#표현식-1" class="headerlink" title="표현식"></a>표현식</h3><p>표현식은 하나의 값으로 평가될 수 있는 문이다.</p>
 <h2 id="데이터-타입의-분류"><a href="#데이터-타입의-분류" class="headerlink" title="데이터 타입의 분류"></a>데이터 타입의 분류</h2><h3 id="원시타입-primitive-type"><a href="#원시타입-primitive-type" class="headerlink" title="원시타입(primitive type)"></a>원시타입(primitive type)</h3><ul>
 <li>숫자 타입 : 숫자(정수, 실수)</li>
 <li>문자열 타입 : 문자열</li>
-<li>불리언 타입 : 논리적 참과 거짓</li>
+<li>불리언 타입 : 논리적 참과 거짓<br>-진위값(if문)</li>
 <li>undefined 타입 : 선언은 되었지만 값을 할당하지 않은 변수에 암묵적으로 할당되는 값</li>
-<li>null 타입: 값이 없다는 것을 의도적으로 명시할 때 사용하는 값</li>
+<li>null 타입: 값이 없다는 것을 의도적으로 명시할 때 사용하는 값<br>-변수에 값이 없다. 라고 표현 (의도적 부재)</li>
 <li>symbol 타입 : es6에서 새롭게 추가된 7번째 타입</li>
 </ul>
-<h3 id="객체-타입-객체-함수-배열-등"><a href="#객체-타입-객체-함수-배열-등" class="headerlink" title="객체 타입: 객체, 함수, 배열 등"></a>객체 타입: 객체, 함수, 배열 등</h3>
+<h3 id="객체-타입-객체-함수-배열-등"><a href="#객체-타입-객체-함수-배열-등" class="headerlink" title="객체 타입: 객체, 함수, 배열 등"></a>객체 타입: 객체, 함수, 배열 등</h3><ul>
+<li>객체형, 객체타입</li>
+</ul>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">`1+1 = <span class="hljs-subst">$&#123;<span class="hljs-number">1</span>+<span class="hljs-number">1</span>&#125;</span>`</span>) <span class="hljs-comment">// 1+1=2 문자열 2로 표시됨, 암묵적 타입 변환이 됨. 타입변환이 빈번히 발생됨.</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="동적-타입언어-정적타입언어"><a href="#동적-타입언어-정적타입언어" class="headerlink" title="동적 타입언어, 정적타입언어"></a>동적 타입언어, 정적타입언어</h2><p>값에 타입이 있다. </p>
+<h3 id="동적타입언어"><a href="#동적타입언어" class="headerlink" title="동적타입언어"></a>동적타입언어</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> a;</span><br><span class="line"><span class="hljs-keyword">typeof</span>.a <span class="hljs-comment">//undefined</span></span><br><span class="line"><span class="hljs-keyword">var</span> a = <span class="hljs-number">10</span>;</span><br><span class="line"><span class="hljs-keyword">typeof</span>.b <span class="hljs-comment">//number</span></span><br></pre></td></tr></table></figure>
+
+<p>타입이 바뀐다.</p>
+<p>근본적인 차이.</p>
+<p>정적타입언어는 선언시 타입을 선언함으로 다른 타입을 선언 할 수 없다.<br>동적타입언어는 타입을 변경 할 수 있다. </p>
+<h3 id="정적타입언어"><a href="#정적타입언어" class="headerlink" title="정적타입언어"></a>정적타입언어</h3>
         </div>
         
         
@@ -306,7 +329,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        15
+                        17
                     </p>
                 </div>
             </div>
@@ -434,7 +457,7 @@
                 <span class="level-item">study</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">14</span>
+                <span class="level-item tag">16</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/study/internet/">
@@ -450,7 +473,7 @@
                 <span class="level-item">javascript</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">4</span>
+                <span class="level-item tag">6</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/study/javascript-basic/">
@@ -485,6 +508,44 @@
         <h3 class="menu-label">
             Recent
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/10/07/javascript/05_type-conversion/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="타입 변환과 단축 평가">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-07T09:16:52.832Z">2019-10-07</time></div>
+                    <a href="/2019/10/07/javascript/05_type-conversion/" class="title has-link-black-ter is-size-6 has-text-weight-normal">타입 변환과 단축 평가</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/10/07/javascript/04_control-statement/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="제어문">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-07T08:45:36.890Z">2019-10-07</time></div>
+                    <a href="/2019/10/07/javascript/04_control-statement/" class="title has-link-black-ter is-size-6 has-text-weight-normal">제어문</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -543,44 +604,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/10/02/javascript/03_operator/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="연산자">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-02T10:15:54.298Z">2019-10-02</time></div>
-                    <a href="/2019/10/02/javascript/03_operator/" class="title has-link-black-ter is-size-6 has-text-weight-normal">연산자</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/10/02/javascript/02_data-type/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="data-type">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-02T09:15:15.278Z">2019-10-02</time></div>
-                    <a href="/2019/10/02/javascript/02_data-type/" class="title has-link-black-ter is-size-6 has-text-weight-normal">data-type</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -599,7 +622,7 @@
                     <span class="level-item">October 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">13</span>
+                    <span class="level-item tag">15</span>
                 </span>
             </a>
         </li>
@@ -653,6 +676,44 @@
         
         <article class="media">
             
+            <a href="/2019/10/07/javascript/05_type-conversion/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="타입 변환과 단축 평가">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-07T09:16:52.832Z">2019-10-07</time></div>
+                    <a href="/2019/10/07/javascript/05_type-conversion/" class="title has-link-black-ter is-size-6 has-text-weight-normal">타입 변환과 단축 평가</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/10/07/javascript/04_control-statement/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="제어문">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-07T08:45:36.890Z">2019-10-07</time></div>
+                    <a href="/2019/10/07/javascript/04_control-statement/" class="title has-link-black-ter is-size-6 has-text-weight-normal">제어문</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/10/04/concept/05_memory/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="메모리와 메모리 구조">
@@ -708,44 +769,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/10/02/javascript/03_operator/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="연산자">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-02T10:15:54.298Z">2019-10-02</time></div>
-                    <a href="/2019/10/02/javascript/03_operator/" class="title has-link-black-ter is-size-6 has-text-weight-normal">연산자</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/10/02/javascript/02_data-type/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="data-type">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-02T09:15:15.278Z">2019-10-02</time></div>
-                    <a href="/2019/10/02/javascript/02_data-type/" class="title has-link-black-ter is-size-6 has-text-weight-normal">data-type</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -764,7 +787,7 @@
                     <span class="level-item">October 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">13</span>
+                    <span class="level-item tag">15</span>
                 </span>
             </a>
         </li>
