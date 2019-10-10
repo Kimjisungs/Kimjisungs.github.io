@@ -56,8 +56,8 @@
     color: #fff;
 }
 
-/* 
-    custom 
+/*
+    custom
 */
 /* profile */
 .widget .has-text-centered figure.image {
@@ -81,7 +81,7 @@
     }
 
     .has-order-1 {
-        width: 35% !important;
+        width: 30% !important;
     }
 }
 
@@ -96,7 +96,7 @@
 @media screen and (min-width: 1280px) {
     .sub-section .has-order-2 {
         width: 75% !important;
-    } 
+    }
     .has-order-2 {
         display: block;
         overflow: hidden;
@@ -104,7 +104,7 @@
         flex-wrap: wrap;
         justify-content: space-between;
         /* flex-direction: column; */
-        width: 67% !important;
+        width: 70% !important;
     }
     .has-order-2 .card {
         /* height: 50%; */
