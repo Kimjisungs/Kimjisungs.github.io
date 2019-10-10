@@ -7,17 +7,18 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>Archives - js-study</title>
+<title>단축 평가 - js-study</title>
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="js-study">
-<meta property="og:url" content="https://kimjisungs.github.io/archives/page/2/index.html">
+    <meta property="og:type" content="article">
+<meta property="og:title" content="단축 평가">
+<meta property="og:url" content="https://kimjisungs.github.io/2019/10/10/concept/09_short-evaluation/index.html">
 <meta property="og:site_name" content="js-study">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://kimjisungs.github.io/images/og_image.png">
+<meta property="og:updated_time" content="2019-10-10T10:50:44.297Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js-study">
+<meta name="twitter:title" content="단축 평가">
 <meta name="twitter:image" content="https://kimjisungs.github.io/images/og_image.png">
 
 
@@ -88,7 +89,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="js-study" height="28">
+                <img src="/images/logo.svg" alt="단축 평가" height="28">
             
             </a>
         </div>
@@ -138,231 +139,138 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
         
-<div class="card widget">
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-10-10T10:28:53.950Z">2019-10-10</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/study/">study</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/study/개념이해/">개념이해</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 minutes read (About 266 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                단축 평가
+            
+        </h1>
+        <div class="content">
+            <p><span></span></p>
+<a id="more"></a>
+
+<h2 id="단축평가"><a href="#단축평가" class="headerlink" title="단축평가"></a>단축평가</h2><p>논리 || 연산자와 논리곱 &amp;&amp; 연산자의 연산 결과는 불리언 값이 아닐 수도 있다. 이 두 연산자는 언제나 피연산자 중 어느 한쪽 값을 반환한다.  </p>
+<ul>
+<li>첫번째 피연산자 ‘Cat’은 true로 평가된다. 이 시점에 두번째 피연산자까지 평가해 보지 않아도 위 표현식을 평가할 수 있다.</li>
+<li>논리 연산자 || 는 논리 연산의 결과를 결정한 첫번째 피연산자 즉. 문자열 ‘Cat’을 그대로 반환한다. </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">단축 평가 표현식</th>
+<th align="left">평가 결과</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">true || anything</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left">false || anything</td>
+<td align="left">anything</td>
+</tr>
+<tr>
+<td align="left">true &amp;&amp; anything</td>
+<td align="left">anything</td>
+</tr>
+<tr>
+<td align="left">false &amp;&amp; anything</td>
+<td align="left">false</td>
+</tr>
+</tbody></table>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 논리합(||) 연산자</span></span><br><span class="line"><span class="hljs-string">'Cat'</span> || <span class="hljs-string">'Dog'</span>  <span class="hljs-comment">// 'Cat'</span></span><br><span class="line"><span class="hljs-literal">false</span> || <span class="hljs-string">'Dog'</span>  <span class="hljs-comment">// 'Dog'</span></span><br><span class="line"><span class="hljs-string">'Cat'</span> || <span class="hljs-literal">false</span>  <span class="hljs-comment">// 'Cat'</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 논리곱(&amp;&amp;) 연산자</span></span><br><span class="line"><span class="hljs-string">'Cat'</span> &amp;&amp; <span class="hljs-string">'Dog'</span>  <span class="hljs-comment">// Dog</span></span><br><span class="line"><span class="hljs-literal">false</span> &amp;&amp; <span class="hljs-string">'Dog'</span>  <span class="hljs-comment">// false</span></span><br><span class="line"><span class="hljs-string">'Cat'</span> &amp;&amp; <span class="hljs-literal">false</span>  <span class="hljs-comment">// false</span></span><br></pre></td></tr></table></figure>
+
+<p>함수를 호출할 때 인수를 전달하지 않으면 매개변수는 undefined를 갖는다. 이때 단축 평가를 사용하여 매개변수의 기본값을 설정하면 undefined로 인해 발생할 수 있는 에러를 방지할 수 있다.</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
     <div class="card-content">
-        <h3 class="tag is-link">
-        2019
-        </h3>
-        <div class="timeline">
-        
-            <article class="media">
+        <h3 class="menu-label has-text-centered">Like this article? Support the author with</h3>
+        <div class="buttons is-centered">
+            
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-10-04T12:14:32.756Z">2019-10-04</time>
-                        <a href="/2019/10/04/concept/05_memory/" class="title has-link-black-ter is-size-6 has-text-weight-normal">메모리와 메모리 구조</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/개념이해/">개념이해</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
+<div class="notification is-danger">
+    You forgot to set the <code>qrcode</code> for Alipay. Please set it in <code>_config.yml</code>.
+</div>
+
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-10-04T11:00:31.310Z">2019-10-04</time>
-                        <a href="/2019/10/04/concept/04_keyword_assign_Identifier/" class="title has-link-black-ter is-size-6 has-text-weight-normal">키워드, 할당, 식별자</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/개념이해/">개념이해</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-10-02T13:20:43.087Z">2019-10-02</time>
-                        <a href="/2019/10/02/concept/03_web_works/" class="title has-link-black-ter is-size-6 has-text-weight-normal">웹 동작 원리</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/개념이해/">개념이해</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
+<div class="notification is-danger">
+    You forgot to set the <code>qrcode</code> for Wechat. Please set it in <code>_config.yml</code>.
+</div>
+
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-10-02T10:15:54.298Z">2019-10-02</time>
-                        <a href="/2019/10/02/javascript/03_operator/" class="title has-link-black-ter is-size-6 has-text-weight-normal">연산자</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
+                <!-- Visit https://www.paypal.com/donate/buttons/ to get your donate button -->
+
+<div class="notification is-danger">
+    You forgot to set the <code>business</code> and <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.
+</div>
+
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-10-02T09:15:15.278Z">2019-10-02</time>
-                        <a href="/2019/10/02/javascript/02_data-type/" class="title has-link-black-ter is-size-6 has-text-weight-normal">data-type</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-10-01T09:31:00.095Z">2019-10-01</time>
-                        <a href="/2019/10/01/javascript/01_variable/" class="title has-link-black-ter is-size-6 has-text-weight-normal">variable (변수)</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
+<div class="notification is-danger">
+    You forgot to set the <code>url</code> Patreon. Please set it in <code>_config.yml</code>.
+</div>
+
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-10-01T09:29:05.738Z">2019-10-01</time>
-                        <a href="/2019/10/01/javascript/00_development-environment/" class="title has-link-black-ter is-size-6 has-text-weight-normal">개발 환경 및 실행 환경</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
-                
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-10-01T09:23:09.943Z">2019-10-01</time>
-                        <a href="/2019/10/01/concept/02_javascript_ECMAScript/" class="title has-link-black-ter is-size-6 has-text-weight-normal">javascript VS ECMAScript</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/개념이해/">개념이해</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
-                
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-10-01T09:17:39.368Z">2019-10-01</time>
-                        <a href="/2019/10/01/concept/01_compiler_interpreter/" class="title has-link-black-ter is-size-6 has-text-weight-normal">컴파일, 인터프리터 언어</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/개념이해/">개념이해</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
-                
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-10-01T09:05:51.310Z">2019-10-01</time>
-                        <a href="/2019/10/01/concept/00_ascii-code_uini-code/" class="title has-link-black-ter is-size-6 has-text-weight-normal">아스키코드,유니코드</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/개념이해/">개념이해</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
         </div>
     </div>
 </div>
 
-    
 
-    
+
 <div class="card card-transparent">
-    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
-        <div class="pagination-previous">
-            <a class="is-flex-grow has-text-black-ter" href="/archives/">Previous</a>
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/10/10/javascript/08_function/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">함수</span>
+            </a>
         </div>
-        <div class="pagination-next">
-            <a class="is-flex-grow has-text-black-ter" href="/archives/page/3/">Next</a>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/10/09/javascript/07_primitive-value_object-compare/">
+                <span class="level-item">원시 값과 객체의 비교</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
         </div>
-        <ul class="pagination-list is-hidden-mobile">
-            
-            <li><a class="pagination-link has-text-black-ter" href="/archives/">1</a></li>
-            
-            <li><a class="pagination-link is-current" href="/archives/page/2/">2</a></li>
-            
-            <li><a class="pagination-link has-text-black-ter" href="/archives/page/3/">3</a></li>
-            
-        </ul>
-    </nav>
+        
+    </div>
 </div>
+
+
 </div>
                 
 
@@ -907,7 +815,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="js-study" height="28">
+                    <img src="/images/logo.svg" alt="단축 평가" height="28">
                 
                 </a>
                 <p class="is-size-7">
