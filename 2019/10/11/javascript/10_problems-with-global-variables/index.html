@@ -7,18 +7,18 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>all-categories - js-study</title>
+<title>전역변수의 문제점 - js-study</title>
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="all-categories">
-<meta property="og:url" content="https://kimjisungs.github.io/all-categories/index.html">
+    <meta property="og:type" content="article">
+<meta property="og:title" content="전역변수의 문제점">
+<meta property="og:url" content="https://kimjisungs.github.io/2019/10/11/javascript/10_problems-with-global-variables/index.html">
 <meta property="og:site_name" content="js-study">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://kimjisungs.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-09-30T14:18:53.339Z">
+<meta property="og:updated_time" content="2019-10-11T14:46:28.952Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="all-categories">
+<meta name="twitter:title" content="전역변수의 문제점">
 <meta name="twitter:image" content="https://kimjisungs.github.io/images/og_image.png">
 
 
@@ -89,7 +89,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="all-categories" height="28">
+                <img src="/images/logo.svg" alt="전역변수의 문제점" height="28">
             
             </a>
         </div>
@@ -145,13 +145,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-09-30T14:18:00.000Z">2019-09-30</time>
+                <time class="level-item has-text-grey" datetime="2019-10-11T13:55:44.053Z">2019-10-11</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/study/">study</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
+                </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    a few seconds read (About 0 words)
+                    8 minutes read (About 1127 words)
                 </span>
                 
                 
@@ -160,11 +164,28 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                all-categories
+                전역변수의 문제점
             
         </h1>
         <div class="content">
-            
+            <p><span> </span></p>
+<a id="more"></a>
+
+<h2 id="변수의-생명-주기"><a href="#변수의-생명-주기" class="headerlink" title="변수의 생명 주기"></a>변수의 생명 주기</h2><h3 id="지역-변수의-생명-주기"><a href="#지역-변수의-생명-주기" class="headerlink" title="지역 변수의 생명 주기"></a>지역 변수의 생명 주기</h3><p>변수는 선언에 의해 생성되고 할당을 통해 값을 갖는다. 그리고 언젠가 소멸한다. 즉, 변수는 생물과 유사하게 생성되고 소멸되는 생명 주기(Life cycle)가 있다. 변수에 생명 주기가 없다면 한번 선언된 변수는 프로그램을 종료하지 않는 한 영원히 메모리 공간을 점유하게 된다.</p>
+<p> 함수 내부에서 선언된 지역 변수 x는 foo 함수가 호출되어 실행되는 동안에만 유효하다. 즉, 지역 변수의 생명 주기는 함수의 생명 주기와 일치한다.</p>
+<p><strong>변수 호이스팅은 스코프를 단위로 동작한다.</strong> 전역 변수의 호이스팅은 전역 변수의 선언이 전역 스코프의 선두로 끌어 올려진 것처럼 동작한다. 따라서 전역 변수는 전역 전체에서 유효하다. 지역 변수의 호이스팅은 지역 변수의 선언이 지역 스코프의 선두로 끌어 올려진 것처럼 동작한다. 따라서 지역 변수는 함수 전체에서 유효하다. 즉, <strong>변수 호이스팅은 변수 선언이 스코프의 선두로 끌어 올려진 것처럼 동작하는 자바스크립트 고유의 특징을 말한다.</strong></p>
+<h3 id="전역-변수의-생명-주기"><a href="#전역-변수의-생명-주기" class="headerlink" title="전역 변수의 생명 주기"></a>전역 변수의 생명 주기</h3><p>함수와는 달리 전역 코드는 명확한 호출없이 실행된다. 다시 말해 전역 코드는 함수 호출과 같이 전역 코드를 실행하는 특별한 진입점(entry point)이 없고 코드가 로드되자마자 곧바로 해석되고 실행된다.</p>
+<p>var 키워드로 선언한 전역 변수는 전역 객체의 프로퍼티가 된다. 브라우저 환경에서 전역 객체는 window이므로 브라우저 환경에서 var 키워드로 선언한 전역 변수는 전역 객체 window의 프로퍼티이다. 이 전역 객체 window는 웹페이지가 종료하기 전까지 유효하다. 따라서 브라우저 환경에서 var 키워드로 선언한 전역 변수는 웹페이지를 종료할 때까지 유효하다.</p>
+<h2 id="전역-변수의-문제점"><a href="#전역-변수의-문제점" class="headerlink" title="전역 변수의 문제점"></a>전역 변수의 문제점</h2><p><strong>암묵적 결합</strong></p>
+<p>전역 변수를 사용하는 의도는 전역, 즉 코드 어디에서든지 전역 변수를 사용하겠다는 것이다. 이는 모든 코드가 전역 변수를 참조하고 변경할 수 있는 <strong>암묵적 결합(implicit coupling)</strong>을 허용하는 것으로 변수의 유효 범위가 크면 클 수록 코드의 가독성은 나빠지고 의도치 않게 상태가 변경될 수 있는 위험성도 높아진다.</p>
+<p><strong>긴 생명 주기</strong></p>
+<p><strong>전역 변수는 생명 주기가 길다.</strong> 전역 변수의 상태를 변경할 수 있는 시간도 길고, 모든 함수가 참조할 수 있기 때문에 상태를 변경할 기회도 많다. 또한 메모리 리소스도 오랜 기간 소비한다.</p>
+<p><strong>스코프 체인 상에서 종점에 존재</strong></p>
+<p>전역 변수는 또 하나의 문제는 스코프 체인 상에서 종점에 존재한다는 것이다. 이는 변수를 검색할 때 전역 변수가 가장 마지막에 검색된다는 것을 말한다. 즉, <strong>전역 변수의 검색 속도가 가장 느리다.</strong> 검색 속도의 차이는 그다지 크지 않지만 속도의 차이는 분명히 있다.</p>
+<p><strong>네임 스페이스 오염</strong></p>
+<p>자바스크립트에서 가장 큰 문제점 중의 하나는 파일이 분리되어 있다하여도 하나의 전역 스코프를 공유한다는 것이다. 따라서 다른 파일 내에서 동일한 이름으로 명명된 변수나 함수가 같은 스코프 내에 존재할 경우 예상치 못한 결과를 가져올 수 있다.</p>
+<h2 id="전역-변수-사용-억제-방법"><a href="#전역-변수-사용-억제-방법" class="headerlink" title="전역 변수 사용 억제 방법"></a>전역 변수 사용 억제 방법</h2><h3 id="즉시실행함수"><a href="#즉시실행함수" class="headerlink" title="즉시실행함수"></a>즉시실행함수</h3><p>함수의 정의와 동시에 호출되는 즉시 실행 함수는 단 한번만 호출된다. <strong>모든 코드를 즉시 실행 함수로 감싸면 모든 변수는 즉시 실행 함수의 지역 변수가 된다.</strong> 이러한 특성을 이용해 전역 변수의 사용을 제한하는 방법이다.</p>
+<h3 id="모듈-패턴"><a href="#모듈-패턴" class="headerlink" title="모듈 패턴"></a>모듈 패턴</h3>
         </div>
         
         
@@ -209,6 +230,27 @@
 </div>
 
 
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/10/11/javascript/11_let-const-blocklevelscope/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">let, const와 블록 레벨 스코프</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/10/10/javascript/09_scope/">
+                <span class="level-item">스코프</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
 </div>
@@ -755,7 +797,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="all-categories" height="28">
+                    <img src="/images/logo.svg" alt="전역변수의 문제점" height="28">
                 
                 </a>
                 <p class="is-size-7">

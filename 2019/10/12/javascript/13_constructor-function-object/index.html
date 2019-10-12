@@ -7,18 +7,18 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>all-categories - js-study</title>
+<title>생성자 함수에 의한 객체 생성 - js-study</title>
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="all-categories">
-<meta property="og:url" content="https://kimjisungs.github.io/all-categories/index.html">
+    <meta property="og:type" content="article">
+<meta property="og:title" content="생성자 함수에 의한 객체 생성">
+<meta property="og:url" content="https://kimjisungs.github.io/2019/10/12/javascript/13_constructor-function-object/index.html">
 <meta property="og:site_name" content="js-study">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://kimjisungs.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-09-30T14:18:53.339Z">
+<meta property="og:updated_time" content="2019-10-12T11:45:06.864Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="all-categories">
+<meta name="twitter:title" content="생성자 함수에 의한 객체 생성">
 <meta name="twitter:image" content="https://kimjisungs.github.io/images/og_image.png">
 
 
@@ -89,7 +89,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="all-categories" height="28">
+                <img src="/images/logo.svg" alt="생성자 함수에 의한 객체 생성" height="28">
             
             </a>
         </div>
@@ -145,13 +145,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-09-30T14:18:00.000Z">2019-09-30</time>
+                <time class="level-item has-text-grey" datetime="2019-10-12T08:11:34.961Z">2019-10-12</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/study/">study</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
+                </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    a few seconds read (About 0 words)
+                    8 minutes read (About 1126 words)
                 </span>
                 
                 
@@ -160,11 +164,35 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                all-categories
+                생성자 함수에 의한 객체 생성
             
         </h1>
         <div class="content">
-            
+            <p><span> </span></p>
+<a id="more"></a>
+
+<h2 id="Object-생성자-함수"><a href="#Object-생성자-함수" class="headerlink" title="Object 생성자 함수"></a>Object 생성자 함수</h2><p>생성자(constructor) 함수란 new 연산자와 함께 호출하여 객체(인스턴스)를 생성하는 함수를 말한다. 생성자 함수에 의해 생성된 객체를 인스턴스(instance)라 한다.</p>
+<h3 id="생성자-함수에-의한-객체-생성-방식의-장점"><a href="#생성자-함수에-의한-객체-생성-방식의-장점" class="headerlink" title="생성자 함수에 의한 객체 생성 방식의 장점"></a>생성자 함수에 의한 객체 생성 방식의 장점</h3><p>생성자 함수에 의한 객체 생성 방식은 마치 객체(인스턴스)를 생성하기 위한 템플릿(클래스)처럼 생성자 함수를 사용하여 프로퍼티 구조가 동일한 객체 여러 개를 간편하게 생성할 수 있다.</p>
+<p><strong>new 연산자와 함께 호출하면 해당 함수는 생성자 함수로 동작한다.</strong>만약 new 연산자와 함께 생성자 함수를 호출하지 않으면 생성자 함수가 아니라 일반 함수로 동작한다.</p>
+<h3 id="내부-메소드-call과-construct"><a href="#내부-메소드-call과-construct" class="headerlink" title="내부 메소드 call과 construct"></a>내부 메소드 call과 construct</h3><p>함수 객체는 callable이면서 constructor이거나 callable이면서 non-constructor이다. 즉, 모든 함수 객체는 호출할 수 있지만 모든 함수 객체를 생성자 함수로서 호출할 수 있는 것은 아니다.</p>
+<h3 id="constructor와-non-constructor의-구분"><a href="#constructor와-non-constructor의-구분" class="headerlink" title="constructor와 non-constructor의 구분"></a>constructor와 non-constructor의 구분</h3><p>일반 함수로 정의된 함수만이 constructor이다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span>(<span class="hljs-params"></span>) </span>&#123;&#125;</span><br><span class="line"><span class="hljs-keyword">const</span> bar = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;&#125;</span><br><span class="line"><span class="hljs-keyword">const</span> baz = &#123;</span><br><span class="line">	x : <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">new</span> foo(); <span class="hljs-comment">//ok</span></span><br><span class="line"><span class="hljs-keyword">new</span> bar(); <span class="hljs-comment">//ok</span></span><br><span class="line"><span class="hljs-keyword">new</span> baz.x(); <span class="hljs-comment">//ok</span></span><br></pre></td></tr></table></figure>
+
+<p>일반 함수로 정의된 함수만이 constructor이다. 함수의 종류가 Arrow, Method인 함수는 non-constructor가 된다. 즉, 같이 일반 함수로 정의된 함수만이 생성자 함수로서 호출될 수 있다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> arrow = () = &#123;&#125;;</span><br><span class="line"><span class="hljs-keyword">new</span> arrow();  <span class="hljs-comment">// TypeError: arrow is not a constructor</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="생성자-함수의-인스턴스-생성-과정"><a href="#생성자-함수의-인스턴스-생성-과정" class="headerlink" title="생성자 함수의 인스턴스 생성 과정"></a>생성자 함수의 인스턴스 생성 과정</h3><p>생성자 함수의 역할은 프로퍼티 구조가 동일한 인스턴스를 생성하기 위한 템플릿(클래스)으로서 동작하여 <strong>인스턴스를 생성</strong>하는 것과 <strong>생성된 인스턴스를 초기화(인스턴스 프로퍼티 추가 및 초기값 할당)</strong>하는 것이다. 생성자 함수가 인스턴스를 생성하는 것은 필수이고, 생성된 인스턴스를 초기화하는 것은 옵션이다.</p>
+<ol>
+<li><p>인스턴스 생성과 this 바인딩 암묵적으로 빈 객체가 생성된다. 이 빈 객체가 바로 (아직 완성되진 않았지만) 생성자 함수가 생성한 인스턴스이다. 이때 생성자 함수가 생성한 인스턴스의 프로토타입으로 생성자 함수의 prototype 프로퍼티가 가리키는 객체가 설정된다. 그리고 암묵적으로 생성된 빈 객체, 즉 인스턴스는 this에 바인딩된다. 생성자 함수 내부의 this가 생성자 함수가 생성할 인스턴스를 가리키는 이유가 바로 이것이다.</p>
+</li>
+<li><p>인스턴스 초기화<br>생성자 함수에 기술되어 있는 코드가 실행되어 this에 바인딩되어 있는 인스턴스를 초기화한다. 즉, this에 바인딩되어 있는 인스턴스에 프로퍼티나 메소드를 추가하고 생성자 함수가 인수로 전달받은 초기값을 인스턴스 프로퍼티에 할당하여 초기화하거나 고정값을 할당한다. 이 처리는 개발자가 기술한다.</p>
+</li>
+</ol>
+<p>생성자 함수 내부에서 명시적으로 this가 아닌 다른 값을 반환하는 것은 생성자 함수의 기본 동작을 훼손한다. 따라서 생성자 함수 내부에서 return 문을 반드시 생략해야 한다.</p>
+<h3 id="new-연산자"><a href="#new-연산자" class="headerlink" title="new 연산자"></a>new 연산자</h3><p>일반 함수와 생성자 함수에 특별한 형식적 차이는 없다. new 연산자와 함께 함수를 호출하면 해당 함수는 생성자 함수로 동작한다. 단, new 연산자와 함께 호출하는 함수는 non-constructor가 아닌 constructor이여야 한다.</p>
+<p>new 연산자 없이 생성자 함수를 호출하면 일반 함수로 호출된다. 다시 말해, 함수 객체의 내부 메소드 [[Construct]]가 호출되는 것이 아니라 [[Call]]이 호출된다.</p>
+<p>Circle 함수를 new 연산자와 함께 생성자 함수로서 호출하면 함수 내부의 this는 Circle 생성자 함수가 생성할 인스턴스를 가리킨다. 하지만 Circle 함수를 일반적인 함수로서 호출하면 함수 내부의 this는 전역 객체 window를 가리킨다.</p>
+
         </div>
         
         
@@ -209,6 +237,27 @@
 </div>
 
 
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/10/12/javascript/14_function-first-object/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">함수와 일급객체</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/10/12/javascript/12_property-definition/">
+                <span class="level-item">프로퍼티의 정의</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
 </div>
@@ -755,7 +804,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="all-categories" height="28">
+                    <img src="/images/logo.svg" alt="생성자 함수에 의한 객체 생성" height="28">
                 
                 </a>
                 <p class="is-size-7">

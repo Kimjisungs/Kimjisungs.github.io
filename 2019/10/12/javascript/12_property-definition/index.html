@@ -7,18 +7,18 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>all-categories - js-study</title>
+<title>프로퍼티의 정의 - js-study</title>
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="all-categories">
-<meta property="og:url" content="https://kimjisungs.github.io/all-categories/index.html">
+    <meta property="og:type" content="article">
+<meta property="og:title" content="프로퍼티의 정의">
+<meta property="og:url" content="https://kimjisungs.github.io/2019/10/12/javascript/12_property-definition/index.html">
 <meta property="og:site_name" content="js-study">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://kimjisungs.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-09-30T14:18:53.339Z">
+<meta property="og:updated_time" content="2019-10-12T08:10:34.846Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="all-categories">
+<meta name="twitter:title" content="프로퍼티의 정의">
 <meta name="twitter:image" content="https://kimjisungs.github.io/images/og_image.png">
 
 
@@ -89,7 +89,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="all-categories" height="28">
+                <img src="/images/logo.svg" alt="프로퍼티의 정의" height="28">
             
             </a>
         </div>
@@ -145,13 +145,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-09-30T14:18:00.000Z">2019-09-30</time>
+                <time class="level-item has-text-grey" datetime="2019-10-12T05:18:19.980Z">2019-10-12</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/study/">study</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
+                </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    a few seconds read (About 0 words)
+                    12 minutes read (About 1774 words)
                 </span>
                 
                 
@@ -160,11 +164,110 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                all-categories
+                프로퍼티의 정의
             
         </h1>
         <div class="content">
-            
+            <p><span> </span></p>
+<a id="more"></a>
+
+<h2 id="프로퍼티-정의란"><a href="#프로퍼티-정의란" class="headerlink" title="프로퍼티 정의란?"></a>프로퍼티 정의란?</h2><p>어티리뷰터의 값을 정의하여 프로퍼티 상태를 관리하는것</p>
+<ol>
+<li>프로퍼티 값을 갱신 가능하도록 할 것인지</li>
+<li>프로퍼티를 열거 가능하도록 할 것인지</li>
+<li>프로퍼티를 재정의 가능하도록 할 것인지</li>
+</ol>
+<p>프로퍼티를 생성할 때, 프로퍼티 상태를 나타내는 프로퍼티 어트리뷰트 값으로 자동 정의한다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> obj = &#123;&#125;;</span><br><span class="line">obj.prop = <span class="hljs-number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">var</span> descriptor = <span class="hljs-built_in">Object</span>.getOwnPropertyDescriptor(obj, <span class="hljs-string">'prop'</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(descriptor);</span><br><span class="line"><span class="hljs-comment">// obj 객체의 prop 프로퍼티는 value, writable, enumerable, configurable 어트리튜트가 정해져 있따.</span></span><br><span class="line"><span class="hljs-comment">// &#123;value: 10, writable; true, enumerable: true, configurable: true&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>프로퍼티 어트리뷰트는 프로퍼티 상태를 나타낸다. 프로퍼티 상태란</p>
+<ul>
+<li>값, 값의 갱신 가능 여부, 열거 가능 여부, 재정의 가능여부 를 말한다.</li>
+</ul>
+<p>프로퍼티 어트리뷰트는 object.getOwnPropertyDescriptor 메소드를 사용해 참조할 수 있다. 이 메소드는 프로퍼티 어트리뷰트 정보를 제공하는 객체인 프로퍼티 디스크립터를 반환한다.</p>
+<h2 id="내부슬롯"><a href="#내부슬롯" class="headerlink" title="내부슬롯"></a>내부슬롯</h2><p>내부 슬롯과 내부 메소드는 ECMAScript 스펙에서 요구하는 객체와 관련된 내부 상태와 내부 동작을 정의한 것이다. </p>
+<p>내부 슬롯과 내부 메소드는 객체의 프로퍼티가 아니다. 따라서 내부 슬롯과 내부 메소드는 직접적으로 접근하거나 호출할 수 있는 방법을 원칙적으로 제공하지 않는다. 단 내부 슬롯과 내부 메소드에 간접적으로 접근할 수 있는 수단은 있다. </p>
+<p><strong>내부 메소드 get</strong></p>
+<p>이 내부 메소드는 프로퍼티 키로, 값에 접근하면 내부적으로 호출된다.  내부 메소드 get의 동작을 파악하면 자바스크립트 엔진이 어떻게 프로퍼티 키로 프로퍼티 값에 접근하는지 파악할 수 있다. get 내부 메소드는 아래와 같이 동작한다.</p>
+<ol>
+<li>프로퍼티 키가 유효한지 확인한다. 프로퍼티 키는 문자열 또는 심볼이어야한다.</li>
+<li>프로토타입 체인에서 프로퍼티를 검색한다.</li>
+<li>검색된 프로퍼티가 <strong>데이터 프로퍼티</strong> 라면 프로퍼티 값, 즉 데이터 프로퍼티의 프로퍼티 어트리뷰트의 값을 그대로 반환한다.</li>
+<li>만약 프로퍼티가 <strong>접근자 프로퍼티</strong>라면 접근자 프로퍼티의 프로퍼티 어트리뷰트 get의 값, 즉 getter 함수를 호출하여 그 결과를 반환한다.</li>
+</ol>
+<h2 id="접근자-프로퍼티"><a href="#접근자-프로퍼티" class="headerlink" title="접근자 프로퍼티"></a>접근자 프로퍼티</h2><p>프로퍼티는 데이터 프로퍼티와 접근자 프로퍼티로 구분할 수 있다.</p>
+<ul>
+<li>데이터 프로퍼티<br>-키와 값으로 구성된 일반적인 프로퍼티다. 지금까지 살펴본 모든 프로퍼티는 데이터 프로퍼티다.</li>
+<li>접근자 프로퍼티<br>-자체적으로 값을 갖지 않고 다른 데이터 프로퍼티의 값을 읽거나 저장할 때 사용하는 접근자 함수로 구성된 프로퍼티다.</li>
+</ul>
+<p>접근자 함수는 getter/setter 함수라고도 부른다. 접근자 프로퍼티 getter와 setter 함수를 모두 정의할 수도 있고 하나만 정의 할 수도 있다.</p>
+<p>메소드 앞에 get, set이 붙은 메소드가 있는데 이것들이 바로 getter와 setter 함수이고, getter/setter 함수의 이름 fullName이 접근자 프로퍼티이다. 접근자 프로퍼티는 자체적으로 값을 가지지 않으며 다만 데이터 프로퍼티의 값을 읽거나 저장할 때 관여할 뿐이다.</p>
+<p>데이터 프로퍼티는 아래와 같은 프로퍼티 어트리뷰트를 갖는다.</p>
+<table>
+<thead>
+<tr>
+<th align="left">프로퍼티 어트리뷰트</th>
+<th align="left">설명</th>
+<th align="left">프로퍼티 디스크립터 객체의 프로퍼티</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">[[Value]]</td>
+<td align="left">- 프로퍼티 키로 프로퍼티 값에 접근하면 내부 메소드 [[Get]]에 의해 반환되는 값이다. - 프로퍼티 키로 프로퍼티 값을 저장하면 [[Value]]에 값을 저장한다. 이때 프로퍼티가 없으면 프로퍼티를 생성하고 생성된 프로퍼티의 [[Value]]에 값을 저장한다.</td>
+<td align="left">value</td>
+</tr>
+<tr>
+<td align="left">[[Writable]]</td>
+<td align="left">- 프로퍼티 값의 변경 가능 여부를 나타내며 불리언 값을 갖는다. - [[Writable]]의 값이 false인 경우, 해당 프로퍼티의 [[Value]]의 값을 변경할 수 없다.</td>
+<td align="left">writable</td>
+</tr>
+<tr>
+<td align="left">[[Enumerable]]</td>
+<td align="left">- 프로퍼티의 열거 가능 여부를 나타내며 불리언 값을 갖는다. - [[Enumerable]]의 값이 false인 경우, 해당 프로퍼티는 for…in 문이나 Object.keys 메소드 등으로 열거할 수 없다.</td>
+<td align="left">enumerable</td>
+</tr>
+<tr>
+<td align="left">[[Configurable]]</td>
+<td align="left">- 프로퍼티의 재정의 가능 여부를 나타내며 불리언 값을 갖는다. - [[Configurable]]의 값이 false인 경우, 해당 프로퍼티의 삭제, 프로퍼티 어트리뷰트 값의 변경이 금지된다. 단, [[Writable]]이 true인 경우, [[Value]]의 변경과 [[Writable]]을 false로 변경하는 것은 허용된다.</td>
+<td align="left">configurable</td>
+</tr>
+</tbody></table>
+<p>접근자 프로퍼티는 아래와 같은 프로퍼티 어트리뷰트를 갖는다.</p>
+<table>
+<thead>
+<tr>
+<th align="left">프로퍼티 어트리뷰트</th>
+<th align="left">설명</th>
+<th align="left">프로퍼티 디스크립터 객체의 프로퍼티</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">[[Get]]</td>
+<td align="left">접근자 프로퍼티를 통해 데이터 프로퍼티의 값을 읽을 때 호출되는 접근자 함수이다. 즉, 접근자 프로퍼티 키로 프로퍼티 값에 접근하면 프로퍼티 어트리뷰트 [[Get]]의 값, 즉 getter 함수가 호출되고 그 결과가 프로퍼티 값으로 반환된다.</td>
+<td align="left">get</td>
+</tr>
+<tr>
+<td align="left">[[Set]]</td>
+<td align="left">접근자 프로퍼티를 통해 데이터 프로퍼티의 값을 저장할 때 호출되는 접근자 함수이다. 즉, 접근자 프로퍼티 키로 프로퍼티 값을 저장하면 프로퍼티 어트리뷰트 [[Set]]의 값, 즉 setter 함수가 호출되고 그 결과가 프로퍼티 값으로 저장된다.</td>
+<td align="left">set</td>
+</tr>
+<tr>
+<td align="left">[[Enumerable]]</td>
+<td align="left">데이터 프로퍼티의 [[Enumerable]]와 같다.</td>
+<td align="left">enumerable</td>
+</tr>
+<tr>
+<td align="left">[[Configurable]]</td>
+<td align="left">데이터 프로퍼티의 [[Configurable]]와 같다.</td>
+<td align="left">configurable</td>
+</tr>
+</tbody></table>
+<h2 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h2><ol>
+<li>프로퍼티는 value, writable, enumerable, configurable 어트리뷰트가 정해져 있다.</li>
+<li>object.getOwnPropertyDescriptor는 프로퍼티 디스크립터 객체를 반환하고, 존재하지 않는 프로퍼티나 상속받은 프로퍼티의 디스크립터를 요구하면 undefined가 반환된다.</li>
+<li>프로퍼티 종류에는 데이터 프로퍼티와 접근자 프로퍼티가 있는데 데이터프로퍼티는 키와 값으로 구성된 일반적인 프로퍼티다. 지금까지 살펴본 모든 프로퍼티는 데이터 프로퍼티이고 접근자 프로퍼티는 자체적으로 값을 갖지 않고 다른 데이터 프로퍼티의 값을 읽거나 저장할 때 사용하는 접근자 함수로 구성된 프로퍼티다.</li>
+</ol>
+
         </div>
         
         
@@ -209,6 +312,27 @@
 </div>
 
 
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/10/12/javascript/13_constructor-function-object/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">생성자 함수에 의한 객체 생성</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/10/11/javascript/11_let-const-blocklevelscope/">
+                <span class="level-item">let, const와 블록 레벨 스코프</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
 </div>
@@ -755,7 +879,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="all-categories" height="28">
+                    <img src="/images/logo.svg" alt="프로퍼티의 정의" height="28">
                 
                 </a>
                 <p class="is-size-7">
