@@ -7,17 +7,18 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>Category: javascript-basic - js-study</title>
+<title>전역 객체 - js-study</title>
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="js-study">
-<meta property="og:url" content="https://kimjisungs.github.io/categories/study/javascript-basic/index.html">
+    <meta property="og:type" content="article">
+<meta property="og:title" content="전역 객체">
+<meta property="og:url" content="https://kimjisungs.github.io/2019/10/16/javascript/16_global-object/index.html">
 <meta property="og:site_name" content="js-study">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://kimjisungs.github.io/images/og_image.png">
+<meta property="og:updated_time" content="2019-10-16T09:24:07.830Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js-study">
+<meta name="twitter:title" content="전역 객체">
 <meta name="twitter:image" content="https://kimjisungs.github.io/images/og_image.png">
 
 
@@ -88,7 +89,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="js-study" height="28">
+                <img src="/images/logo.svg" alt="전역 객체" height="28">
             
             </a>
         </div>
@@ -139,173 +140,117 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-10-16T09:09:30.301Z">2019-10-16</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/study/">study</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4 minutes read (About 529 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                전역 객체
+            
+        </h1>
+        <div class="content">
+            <p><span> </span></p>
+<a id="more"></a>
+
+<h3 id="isFinite"><a href="#isFinite" class="headerlink" title="isFinite"></a>isFinite</h3><p>매개 변수에 전달된 값이 정상적인 유한수인지 검사하여 그 결과를 불리언 타입으로 반환한다. 매개변수에 전달된 값이 숫자가 아닌 경우, 숫자로 타입을 변환한 후 검사를 수행한다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">isFinite</span>(<span class="hljs-literal">Infinity</span>));  <span class="hljs-comment">// false</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">isFinite</span>(<span class="hljs-literal">NaN</span>));       <span class="hljs-comment">// false</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">isFinite</span>(<span class="hljs-string">'Hello'</span>));   <span class="hljs-comment">// false</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">isFinite</span>(<span class="hljs-string">'2005/12/12'</span>));   <span class="hljs-comment">// false</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">isFinite</span>(<span class="hljs-number">0</span>));         <span class="hljs-comment">// true</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">isFinite</span>(<span class="hljs-number">2e64</span>));      <span class="hljs-comment">// true</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">isFinite</span>(<span class="hljs-string">'10'</span>));      <span class="hljs-comment">// true: '10' → 10</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">isFinite</span>(<span class="hljs-literal">null</span>));      <span class="hljs-comment">// true: null → 0</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="isNan"><a href="#isNan" class="headerlink" title="isNan"></a>isNan</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 숫자</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">isNaN</span>(<span class="hljs-literal">NaN</span>)); <span class="hljs-comment">// true</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">isNaN</span>(<span class="hljs-number">10</span>));  <span class="hljs-comment">// false</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 문자열</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">isNaN</span>(<span class="hljs-string">'blabla'</span>)); <span class="hljs-comment">// true: 'blabla' → NaN</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">isNaN</span>(<span class="hljs-string">'10'</span>));     <span class="hljs-comment">// false: '10' → 10</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">isNaN</span>(<span class="hljs-string">'10.12'</span>));  <span class="hljs-comment">// false: '10.12' → 10.12</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">isNaN</span>(<span class="hljs-string">''</span>));       <span class="hljs-comment">// false: '' → 0</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">isNaN</span>(<span class="hljs-string">' '</span>));      <span class="hljs-comment">// false: ' ' → 0</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 불리언</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">isNaN</span>(<span class="hljs-literal">true</span>)); <span class="hljs-comment">// false: true → 1</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">isNaN</span>(<span class="hljs-literal">null</span>)); <span class="hljs-comment">// false: null → 0</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// undefined</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">isNaN</span>(<span class="hljs-literal">undefined</span>)); <span class="hljs-comment">// true: undefined → NaN</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 객체</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">isNaN</span>(&#123;&#125;));  <span class="hljs-comment">// true: &#123;&#125; → NaN</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// date</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">isNaN</span>(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()));             <span class="hljs-comment">// false: new Date() → Number</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">isNaN</span>(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>().toString()));  <span class="hljs-comment">// true:  String → NaN</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="parseFloat"><a href="#parseFloat" class="headerlink" title="parseFloat"></a>parseFloat</h3><p>매개변수에 전달된 문자열을 부동소수점 숫자(floating point number)로 변환하여 반환한다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">parseFloat</span>(<span class="hljs-string">'3.14'</span>));  <span class="hljs-comment">// 3.14</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">parseFloat</span>(<span class="hljs-string">'10.00'</span>)); <span class="hljs-comment">// 10</span></span><br><span class="line"><span class="hljs-comment">// 공백으로 구분된 문자열은 첫번째 문자열만 변환한다.</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">parseFloat</span>(<span class="hljs-string">'34 45 66'</span>)); <span class="hljs-comment">// 34</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">parseFloat</span>(<span class="hljs-string">'40 years'</span>)); <span class="hljs-comment">// 40</span></span><br><span class="line"><span class="hljs-comment">// 첫번째 문자열을 숫자로 변환할 수 없다면 NaN을 반환한다.</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">parseFloat</span>(<span class="hljs-string">'He was 40'</span>)); <span class="hljs-comment">// NaN</span></span><br><span class="line"><span class="hljs-comment">// 전후 공백은 무시된다.</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">parseFloat</span>(<span class="hljs-string">' 60 '</span>)); <span class="hljs-comment">// 60</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="parseInt"><a href="#parseInt" class="headerlink" title="parseInt"></a>parseInt</h3><p>매개변수에 전달된 문자열을 정수형 숫자(Integer)로 해석(parsing)하여 반환한다. 반환값은 언제나 10진수이다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">/**</span></span><br><span class="line"><span class="hljs-comment"> * 주어진 문자열을 정수형 숫자(Integer)로 해석(parsing)하여 반환한다.</span></span><br><span class="line"><span class="hljs-comment"> * 반환값은 언제나 10진수이다.</span></span><br><span class="line"><span class="hljs-comment"> * @param &#123;string&#125; string - 변환 대상 값</span></span><br><span class="line"><span class="hljs-comment"> * @param &#123;number&#125; [radix] - 진법을 나타내는 기수(2 ~ 36, 기본값 10)</span></span><br><span class="line"><span class="hljs-comment"> * @returns &#123;number&#125; 변환 결과값</span></span><br><span class="line"><span class="hljs-comment"> */</span></span><br><span class="line"><span class="hljs-built_in">parseInt</span>(string, radix);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 주어진 문자열을 10진수 정수로 해석하여 반환한다.</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">parseInt</span>(<span class="hljs-string">'10'</span>));     <span class="hljs-comment">// 10</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">parseInt</span>(<span class="hljs-string">'10.123'</span>)); <span class="hljs-comment">// 10</span></span><br></pre></td></tr></table></figure>
+
+<p>첫번째 매개변수에 전달된 문자열에 공백이 있다면 첫번째 문자열만 해석하여 반환하며 전후 공백은 무시된다. 만일 첫번째 문자열을 숫자로 해석할 수 없는 경우, NaN을 반환한다.</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
     <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/categories">Categories</a></li>
+        <h3 class="menu-label has-text-centered">Like this article? Support the author with</h3>
+        <div class="buttons is-centered">
             
-            <li><a href="/categories/study/">study</a></li>
-            
-            <li class="is-active"><a href="#" aria-current="page">javascript-basic</a></li>
-        </ul>
-        </nav>
-    </div>
+                
+<div class="notification is-danger">
+    You forgot to set the <code>qrcode</code> for Alipay. Please set it in <code>_config.yml</code>.
 </div>
 
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-10-01T07:29:13.028Z">2019-10-01</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/study/">study</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/study/javascript-basic/">javascript-basic</a>
-                </div>
                 
                 
-                <span class="level-item has-text-grey">
-                    
-                    
-                    a few seconds read (About 70 words)
-                </span>
+<div class="notification is-danger">
+    You forgot to set the <code>qrcode</code> for Wechat. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                <!-- Visit https://www.paypal.com/donate/buttons/ to get your donate button -->
+
+<div class="notification is-danger">
+    You forgot to set the <code>business</code> and <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.
+</div>
+
                 
                 
-            </div>
+<div class="notification is-danger">
+    You forgot to set the <code>url</code> Patreon. Please set it in <code>_config.yml</code>.
+</div>
+
+                
         </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/10/01/javascript-basic/01_what_javascript/">자바스크립트란?</a>
-            
-        </h1>
-        <div class="content">
-            <p><span> </span></p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/10/01/javascript-basic/01_what_javascript/#more">Read More</a>
-                </div>
-            </div>
-        </div>
-        
-        
     </div>
 </div>
 
 
 
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-10-01T06:22:04.866Z">2019-10-01</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/study/">study</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/study/javascript-basic/">javascript-basic</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    a minute read (About 143 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/10/01/javascript-basic/00_basic_content/">기본 개념과 동작원리 이해</a>
-            
-        </h1>
-        <div class="content">
-            <p><span> </span></p>
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/10/16/javascript/17_this/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">this</span>
+            </a>
         </div>
         
         
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/10/01/javascript-basic/00_basic_content/#more">Read More</a>
-                </div>
-            </div>
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/10/16/javascript/15_prototype/">
+                <span class="level-item">prototype</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
         </div>
-        
         
     </div>
 </div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-09-30T15:00:00.000Z">2019-10-01</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/study/">study</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/study/javascript-basic/">javascript-basic</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    3 minutes read (About 477 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/10/01/javascript-basic/intro/">오리엔테이션</a>
-            
-        </h1>
-        <div class="content">
-            <p><span></span></p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/10/01/javascript-basic/intro/#more">Read More</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
 
 
 </div>
@@ -852,7 +797,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="js-study" height="28">
+                    <img src="/images/logo.svg" alt="전역 객체" height="28">
                 
                 </a>
                 <p class="is-size-7">

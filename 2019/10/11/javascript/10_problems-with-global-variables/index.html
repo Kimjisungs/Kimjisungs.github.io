@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="js-study">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://kimjisungs.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-10-11T14:46:28.952Z">
+<meta property="og:updated_time" content="2019-10-14T07:56:51.874Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="전역변수의 문제점">
 <meta name="twitter:image" content="https://kimjisungs.github.io/images/og_image.png">
@@ -155,7 +155,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    8 minutes read (About 1127 words)
+                    8 minutes read (About 1190 words)
                 </span>
                 
                 
@@ -185,7 +185,8 @@
 <p><strong>네임 스페이스 오염</strong></p>
 <p>자바스크립트에서 가장 큰 문제점 중의 하나는 파일이 분리되어 있다하여도 하나의 전역 스코프를 공유한다는 것이다. 따라서 다른 파일 내에서 동일한 이름으로 명명된 변수나 함수가 같은 스코프 내에 존재할 경우 예상치 못한 결과를 가져올 수 있다.</p>
 <h2 id="전역-변수-사용-억제-방법"><a href="#전역-변수-사용-억제-방법" class="headerlink" title="전역 변수 사용 억제 방법"></a>전역 변수 사용 억제 방법</h2><h3 id="즉시실행함수"><a href="#즉시실행함수" class="headerlink" title="즉시실행함수"></a>즉시실행함수</h3><p>함수의 정의와 동시에 호출되는 즉시 실행 함수는 단 한번만 호출된다. <strong>모든 코드를 즉시 실행 함수로 감싸면 모든 변수는 즉시 실행 함수의 지역 변수가 된다.</strong> 이러한 특성을 이용해 전역 변수의 사용을 제한하는 방법이다.</p>
-<h3 id="모듈-패턴"><a href="#모듈-패턴" class="headerlink" title="모듈 패턴"></a>모듈 패턴</h3>
+<h3 id="모듈-패턴"><a href="#모듈-패턴" class="headerlink" title="모듈 패턴"></a>모듈 패턴</h3><p><em>feat</em> 변수의 생명주기를 짧게하라, 스코프를 줄여라. 메모리를 적게 쓰는것보다 함수를 작게 만든다. 가독성 좋아지고 변수도 빨리 죽고, 함수가 하나의 일만한다. </p>
+
         </div>
         
         
@@ -293,7 +294,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        30
+                        33
                     </p>
                 </div>
             </div>
@@ -421,7 +422,7 @@
                 <span class="level-item">study</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">29</span>
+                <span class="level-item tag">32</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/study/internet/">
@@ -437,7 +438,7 @@
                 <span class="level-item">javascript</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">15</span>
+                <span class="level-item tag">18</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/study/javascript-basic/">
@@ -472,6 +473,63 @@
         <h3 class="menu-label">
             Recent
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/10/16/javascript/17_this/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="this">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-16T09:24:11.011Z">2019-10-16</time></div>
+                    <a href="/2019/10/16/javascript/17_this/" class="title has-link-black-ter is-size-6 has-text-weight-normal">this</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/10/16/javascript/16_global-object/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="전역 객체">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-16T09:09:30.301Z">2019-10-16</time></div>
+                    <a href="/2019/10/16/javascript/16_global-object/" class="title has-link-black-ter is-size-6 has-text-weight-normal">전역 객체</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/10/16/javascript/15_prototype/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="prototype">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-16T06:40:50.351Z">2019-10-16</time></div>
+                    <a href="/2019/10/16/javascript/15_prototype/" class="title has-link-black-ter is-size-6 has-text-weight-normal">prototype</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -511,63 +569,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/10/12/javascript/12_property-definition/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="프로퍼티의 정의">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-12T05:18:19.980Z">2019-10-12</time></div>
-                    <a href="/2019/10/12/javascript/12_property-definition/" class="title has-link-black-ter is-size-6 has-text-weight-normal">프로퍼티의 정의</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/10/11/javascript/11_let-const-blocklevelscope/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="let, const와 블록 레벨 스코프">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-11T14:17:36.416Z">2019-10-11</time></div>
-                    <a href="/2019/10/11/javascript/11_let-const-blocklevelscope/" class="title has-link-black-ter is-size-6 has-text-weight-normal">let, const와 블록 레벨 스코프</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/10/11/javascript/10_problems-with-global-variables/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="전역변수의 문제점">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-11T13:55:44.053Z">2019-10-11</time></div>
-                    <a href="/2019/10/11/javascript/10_problems-with-global-variables/" class="title has-link-black-ter is-size-6 has-text-weight-normal">전역변수의 문제점</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -586,7 +587,7 @@
                     <span class="level-item">October 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">28</span>
+                    <span class="level-item tag">31</span>
                 </span>
             </a>
         </li>
@@ -640,6 +641,63 @@
         
         <article class="media">
             
+            <a href="/2019/10/16/javascript/17_this/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="this">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-16T09:24:11.011Z">2019-10-16</time></div>
+                    <a href="/2019/10/16/javascript/17_this/" class="title has-link-black-ter is-size-6 has-text-weight-normal">this</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/10/16/javascript/16_global-object/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="전역 객체">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-16T09:09:30.301Z">2019-10-16</time></div>
+                    <a href="/2019/10/16/javascript/16_global-object/" class="title has-link-black-ter is-size-6 has-text-weight-normal">전역 객체</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/10/16/javascript/15_prototype/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="prototype">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-16T06:40:50.351Z">2019-10-16</time></div>
+                    <a href="/2019/10/16/javascript/15_prototype/" class="title has-link-black-ter is-size-6 has-text-weight-normal">prototype</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/10/12/javascript/14_function-first-object/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="함수와 일급객체">
@@ -676,63 +734,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/10/12/javascript/12_property-definition/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="프로퍼티의 정의">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-12T05:18:19.980Z">2019-10-12</time></div>
-                    <a href="/2019/10/12/javascript/12_property-definition/" class="title has-link-black-ter is-size-6 has-text-weight-normal">프로퍼티의 정의</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/10/11/javascript/11_let-const-blocklevelscope/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="let, const와 블록 레벨 스코프">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-11T14:17:36.416Z">2019-10-11</time></div>
-                    <a href="/2019/10/11/javascript/11_let-const-blocklevelscope/" class="title has-link-black-ter is-size-6 has-text-weight-normal">let, const와 블록 레벨 스코프</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/10/11/javascript/10_problems-with-global-variables/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="전역변수의 문제점">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-11T13:55:44.053Z">2019-10-11</time></div>
-                    <a href="/2019/10/11/javascript/10_problems-with-global-variables/" class="title has-link-black-ter is-size-6 has-text-weight-normal">전역변수의 문제점</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -751,7 +752,7 @@
                     <span class="level-item">October 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">28</span>
+                    <span class="level-item tag">31</span>
                 </span>
             </a>
         </li>

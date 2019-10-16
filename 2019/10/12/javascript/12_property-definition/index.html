@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="js-study">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://kimjisungs.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-10-12T08:10:34.846Z">
+<meta property="og:updated_time" content="2019-10-15T06:11:29.340Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="프로퍼티의 정의">
 <meta name="twitter:image" content="https://kimjisungs.github.io/images/og_image.png">
@@ -155,7 +155,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    12 minutes read (About 1774 words)
+                    14 minutes read (About 2049 words)
                 </span>
                 
                 
@@ -267,6 +267,9 @@
 <li>object.getOwnPropertyDescriptor는 프로퍼티 디스크립터 객체를 반환하고, 존재하지 않는 프로퍼티나 상속받은 프로퍼티의 디스크립터를 요구하면 undefined가 반환된다.</li>
 <li>프로퍼티 종류에는 데이터 프로퍼티와 접근자 프로퍼티가 있는데 데이터프로퍼티는 키와 값으로 구성된 일반적인 프로퍼티다. 지금까지 살펴본 모든 프로퍼티는 데이터 프로퍼티이고 접근자 프로퍼티는 자체적으로 값을 갖지 않고 다른 데이터 프로퍼티의 값을 읽거나 저장할 때 사용하는 접근자 함수로 구성된 프로퍼티다.</li>
 </ol>
+<p><em>feat</em> </p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> person = &#123;</span><br><span class="line">  firstName: <span class="hljs-string">'Ji sung'</span>,</span><br><span class="line">  lastName: <span class="hljs-string">'Kim'</span>,</span><br><span class="line">  <span class="hljs-keyword">get</span> fullName() &#123; <span class="hljs-comment">// 참조할때. 리턴이 있어야함</span></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.firstName&#125;</span> <span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.lastName&#125;</span>`</span>;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="hljs-keyword">set</span> fullName(firstName) &#123; <span class="hljs-comment">// 반드시 인수가 있어야함. 리턴이 없어야함</span></span><br><span class="line">    <span class="hljs-keyword">this</span>.firstName = firstName;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(person.fullName = <span class="hljs-string">'xxxx'</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(person.fullName);</span><br><span class="line"><span class="hljs-comment">/*</span></span><br><span class="line"><span class="hljs-comment"> 접근자 프로퍼티는 다른 프로퍼티를 조작하고value가 없다.</span></span><br><span class="line"><span class="hljs-comment"> 프로퍼티는 두가지 종류가 있다. 데이터 프로퍼티, 접근자 프로퍼티</span></span><br><span class="line"><span class="hljs-comment"> 데이터 프로퍼티 : value, writable: enumerable, configurable</span></span><br><span class="line"><span class="hljs-comment"> 접근자 프로퍼티 : value가 없기 때문에 다른 데이터를 조작한다. get, set, enumerable, configurable</span></span><br><span class="line"><span class="hljs-comment">  get fullName()은(접근자 프로퍼티는) 메소드 처럼 사용하면 안되고 프로퍼티처럼 사용해야 한다.</span></span><br><span class="line"><span class="hljs-comment"></span></span><br><span class="line"><span class="hljs-comment">*/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//console.log(Object.getOwnPropertyDescriptors(person));</span></span><br><span class="line"><span class="hljs-comment">//value가있는 아이들은 데이터 프로퍼티</span></span><br><span class="line"><span class="hljs-comment">//접근자 프로퍼티는 value가 없다.</span></span><br><span class="line"><span class="hljs-comment">//프로퍼티가 있으면 당연히 값이 있어야한다. 접근자프로퍼티는 다른 프로퍼티 값을 조작한다.</span></span><br><span class="line"><span class="hljs-comment">//접근자 프로퍼티의 존재는 함수이다. 조작해야하니까.</span></span><br></pre></td></tr></table></figure>
+
 
         </div>
         
@@ -375,7 +378,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        30
+                        33
                     </p>
                 </div>
             </div>
@@ -503,7 +506,7 @@
                 <span class="level-item">study</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">29</span>
+                <span class="level-item tag">32</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/study/internet/">
@@ -519,7 +522,7 @@
                 <span class="level-item">javascript</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">15</span>
+                <span class="level-item tag">18</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/study/javascript-basic/">
@@ -554,6 +557,63 @@
         <h3 class="menu-label">
             Recent
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/10/16/javascript/17_this/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="this">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-16T09:24:11.011Z">2019-10-16</time></div>
+                    <a href="/2019/10/16/javascript/17_this/" class="title has-link-black-ter is-size-6 has-text-weight-normal">this</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/10/16/javascript/16_global-object/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="전역 객체">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-16T09:09:30.301Z">2019-10-16</time></div>
+                    <a href="/2019/10/16/javascript/16_global-object/" class="title has-link-black-ter is-size-6 has-text-weight-normal">전역 객체</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/10/16/javascript/15_prototype/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="prototype">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-16T06:40:50.351Z">2019-10-16</time></div>
+                    <a href="/2019/10/16/javascript/15_prototype/" class="title has-link-black-ter is-size-6 has-text-weight-normal">prototype</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -593,63 +653,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/10/12/javascript/12_property-definition/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="프로퍼티의 정의">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-12T05:18:19.980Z">2019-10-12</time></div>
-                    <a href="/2019/10/12/javascript/12_property-definition/" class="title has-link-black-ter is-size-6 has-text-weight-normal">프로퍼티의 정의</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/10/11/javascript/11_let-const-blocklevelscope/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="let, const와 블록 레벨 스코프">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-11T14:17:36.416Z">2019-10-11</time></div>
-                    <a href="/2019/10/11/javascript/11_let-const-blocklevelscope/" class="title has-link-black-ter is-size-6 has-text-weight-normal">let, const와 블록 레벨 스코프</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/10/11/javascript/10_problems-with-global-variables/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="전역변수의 문제점">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-11T13:55:44.053Z">2019-10-11</time></div>
-                    <a href="/2019/10/11/javascript/10_problems-with-global-variables/" class="title has-link-black-ter is-size-6 has-text-weight-normal">전역변수의 문제점</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -668,7 +671,7 @@
                     <span class="level-item">October 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">28</span>
+                    <span class="level-item tag">31</span>
                 </span>
             </a>
         </li>
@@ -722,6 +725,63 @@
         
         <article class="media">
             
+            <a href="/2019/10/16/javascript/17_this/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="this">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-16T09:24:11.011Z">2019-10-16</time></div>
+                    <a href="/2019/10/16/javascript/17_this/" class="title has-link-black-ter is-size-6 has-text-weight-normal">this</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/10/16/javascript/16_global-object/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="전역 객체">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-16T09:09:30.301Z">2019-10-16</time></div>
+                    <a href="/2019/10/16/javascript/16_global-object/" class="title has-link-black-ter is-size-6 has-text-weight-normal">전역 객체</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/10/16/javascript/15_prototype/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="prototype">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-16T06:40:50.351Z">2019-10-16</time></div>
+                    <a href="/2019/10/16/javascript/15_prototype/" class="title has-link-black-ter is-size-6 has-text-weight-normal">prototype</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/10/12/javascript/14_function-first-object/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="함수와 일급객체">
@@ -758,63 +818,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/10/12/javascript/12_property-definition/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="프로퍼티의 정의">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-12T05:18:19.980Z">2019-10-12</time></div>
-                    <a href="/2019/10/12/javascript/12_property-definition/" class="title has-link-black-ter is-size-6 has-text-weight-normal">프로퍼티의 정의</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/10/11/javascript/11_let-const-blocklevelscope/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="let, const와 블록 레벨 스코프">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-11T14:17:36.416Z">2019-10-11</time></div>
-                    <a href="/2019/10/11/javascript/11_let-const-blocklevelscope/" class="title has-link-black-ter is-size-6 has-text-weight-normal">let, const와 블록 레벨 스코프</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/10/11/javascript/10_problems-with-global-variables/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="전역변수의 문제점">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-11T13:55:44.053Z">2019-10-11</time></div>
-                    <a href="/2019/10/11/javascript/10_problems-with-global-variables/" class="title has-link-black-ter is-size-6 has-text-weight-normal">전역변수의 문제점</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/study/">study</a> / <a class="has-link-grey -link" href="/categories/study/javascript/">javascript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -833,7 +836,7 @@
                     <span class="level-item">October 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">28</span>
+                    <span class="level-item tag">31</span>
                 </span>
             </a>
         </li>
